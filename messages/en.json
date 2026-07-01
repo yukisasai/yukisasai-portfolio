@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Yuki Sasai | AI Product Engineer",
+    "description": "Engineer with 50+ web projects, now expanding into AI-powered product development."
+  },
+  "skipLink": "Skip to content",
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "skills": "Skills",
+    "writing": "Writing",
+    "contact": "Contact",
+    "menu": "MENU",
+    "close": "CLOSE",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
+  },
+  "hero": {
+    "role": "AI Product Engineer",
+    "lead": "From web development to AI-powered products.",
+    "leadSub": "5+ years and 50+ websites delivered. Now building with AI and modern web technologies.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "location": "Tokyo, Japan · Remote",
+    "nameAlt": "佐々井 裕希"
+  },
+  "numbers": {
+    "items": [
+      { "value": "50+", "label": "Websites Built" },
+      { "value": "5 Years", "label": "Experience" },
+      { "value": "WordPress", "label": "Professional" },
+      { "value": "Next.js & AI", "label": "Growing" }
+    ]
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Design, build, ship.",
+    "body": [
+      "For the past five years, I have been working in web development and have contributed to more than 50 website projects.",
+      "My experience includes corporate websites, landing pages, recruitment websites, and e-commerce sites, primarily built with WordPress.",
+      "Currently, I'm expanding my expertise into Next.js, TypeScript, system design, Python, and AI-powered product development.",
+      "My goal is to combine my practical web development experience with modern AI technologies to build products that solve real business problems."
+    ]
+  },
+  "career": {
+    "eyebrow": "Career",
+    "title": "Career Timeline",
+    "steps": [
+      { "year": "2019", "title": "Started Web Development" },
+      { "year": null, "title": "WordPress Development" },
+      { "year": null, "title": "Corporate Websites" },
+      { "year": null, "title": "Shopify / EC" },
+      { "year": null, "title": "System Development" },
+      { "year": null, "title": "AI Product Engineering" },
+      { "year": "Now", "title": "Building AI-powered Products" }
+    ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "What I Can Help With",
+    "items": [
+      { "name": "WordPress Website", "badge": null },
+      { "name": "Corporate Website", "badge": null },
+      { "name": "Landing Page", "badge": null },
+      { "name": "Shopify", "badge": null },
+      { "name": "Website Renewal", "badge": null },
+      { "name": "System Development", "badge": null },
+      { "name": "SEO Optimization", "badge": null },
+      { "name": "AI Integration", "badge": "Coming Soon" }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Professional Projects",
+    "description": "End-to-end projects — from identifying challenges to design, development, and launch.",
+    "labels": {
+      "overview": "Overview",
+      "challenge": "Challenge",
+      "solution": "Solution",
+      "result": "Result",
+      "role": "Role",
+      "techStack": "Tech Stack"
+    },
+    "items": [
+      {
+        "slug": "livvy",
+        "name": "Livvy",
+        "url": "https://livvy.jp/",
+        "category": "Corporate Website",
+        "overview": "Planning, design, and development of a corporate website reflecting the brand identity. Implemented responsive design and SEO optimization.",
+        "challenge": "The client needed a website that accurately communicates their brand appeal and provides a great user experience.",
+        "solution": "Built a responsive WordPress site with SEO best practices, ensuring clear messaging and accessibility across all devices.",
+        "result": "Website launched.",
+        "role": ["Planning", "Design", "WordPress Development", "Responsive Design", "SEO"],
+        "techStack": ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
+        "cta": { "label": "Visit Website", "href": "https://livvy.jp/" }
+      },
+      {
+        "slug": "nagase",
+        "name": "Nagase",
+        "url": "https://nagase-ltd.co.jp/",
+        "category": "Corporate Website",
+        "overview": "Planning, design, and development of a corporate website to communicate company information and services.",
+        "challenge": "A professional website was needed to effectively convey the company's credibility and service strengths.",
+        "solution": "Developed with WordPress, implementing clean layouts, responsive design, and SEO optimization.",
+        "result": "Website launched.",
+        "role": ["Planning", "Design", "WordPress Development", "Responsive Design", "SEO"],
+        "techStack": ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
+        "cta": { "label": "Visit Website", "href": "https://nagase-ltd.co.jp/" }
+      },
+      {
+        "slug": "gym-landing-page",
+        "name": "Gym Landing Page",
+        "url": "https://seamlessly.site/gym/",
+        "category": "Landing Page",
+        "overview": "UI design and front-end development of a landing page for gym customer acquisition.",
+        "challenge": "An engaging page design was needed to effectively convert visitors into gym members.",
+        "solution": "Designed with a mobile-first approach, implementing clear CTAs and a compelling, conversion-focused layout.",
+        "result": "Website launched.",
+        "role": ["UI Design", "Front-end Development", "Responsive Design"],
+        "techStack": ["HTML", "CSS", "JavaScript"],
+        "cta": { "label": "Visit Website", "href": "https://seamlessly.site/gym/" }
+      },
+      {
+        "slug": "u2-official-store",
+        "name": "U2 Official Store",
+        "url": "https://u2official.store/",
+        "category": "E-commerce",
+        "overview": "Store setup, UI design, and product management for an official online store.",
+        "challenge": "An e-commerce site was needed that expresses the brand identity while providing a smooth shopping experience.",
+        "solution": "Built on Shopify with brand-aligned UI customization and organized product catalog management.",
+        "result": "Store launched.",
+        "role": ["Store Setup", "UI Design", "Product Management"],
+        "techStack": ["Shopify"],
+        "cta": { "label": "Visit Store", "href": "https://u2official.store/" }
+      }
+    ]
+  },
+  "systemDesign": {
+    "eyebrow": "System Design",
+    "title": "System Design",
+    "description": "I'm learning system design to build products that are scalable, maintainable, and secure.",
+    "items": [
+      "Requirements",
+      "ER Diagram",
+      "API Design",
+      "Authentication",
+      "Authorization",
+      "Architecture",
+      "Security"
+    ]
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Skills",
+    "groups": [
+      {
+        "label": "Web Development",
+        "items": ["WordPress", "PHP", "HTML", "CSS", "JavaScript", "Shopify"]
+      },
+      {
+        "label": "Modern Frontend",
+        "items": ["TypeScript", "React", "Next.js", "Tailwind CSS"]
+      },
+      {
+        "label": "AI / Backend",
+        "items": ["Python", "Node.js", "Supabase / Postgres", "Vercel", "LLM Apps", "RAG"]
+      }
+    ]
+  },
+  "writing": {
+    "eyebrow": "Writing & Learning",
+    "title": "Writing & Learning",
+    "description": "I write about Next.js, TypeScript, system design, and AI on Zenn.",
+    "cta": "Read on Zenn"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's build something together.",
+    "body": "Web development, AI product development, and workflow automation — feel free to reach out.",
+    "cta": "Contact Me"
+  },
+  "contactPage": {
+    "title": "Contact",
+    "back": "← Back",
+    "description": "Web development, AI product development, and workflow automation — feel free to reach out."
+  },
+  "contactForm": {
+    "name": "Name *",
+    "email": "Email *",
+    "message": "Message *",
+    "send": "Send Message",
+    "sending": "Sending…",
+    "successTitle": "Thank you.",
+    "successBody": "Your message has been received. I'll get back to you soon.",
+    "notConfiguredTitle": "Coming Soon",
+    "notConfiguredBody": "The contact form is currently being set up. In the meantime, please reach out via GitHub or LinkedIn.",
+    "errorDefault": "Failed to send. Please try again later.",
+    "errorNetwork": "A network error occurred."
+  }
+}

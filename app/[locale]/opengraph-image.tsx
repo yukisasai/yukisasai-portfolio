@@ -1,12 +1,20 @@
 import { ImageResponse } from "next/og";
-import { profile } from "@/lib/site";
+import { type Locale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/get-dictionary";
+import { profileName } from "@/lib/site";
 
-// SNS シェア用の OGP 画像を動的生成（白基調・ミニマル）
-export const alt = `${profile.name} — ${profile.role}`;
+export const alt = `${profileName} — Global AI Product Engineer`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpengraphImage() {
+export default async function OpengraphImage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as Locale);
+
   return new ImageResponse(
     (
       <div
@@ -29,10 +37,10 @@ export default function OpengraphImage() {
             color: "#6b6b6b",
           }}
         >
-          {profile.role}
+          {dict.hero.role}
         </div>
         <div style={{ fontSize: 110, fontWeight: 700, marginTop: 12 }}>
-          {profile.name}
+          {profileName}
         </div>
         <div
           style={{
@@ -43,7 +51,7 @@ export default function OpengraphImage() {
             maxWidth: 900,
           }}
         >
-          {profile.heroLead}
+          {dict.hero.lead}
         </div>
       </div>
     ),

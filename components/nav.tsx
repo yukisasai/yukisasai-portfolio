@@ -1,27 +1,28 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { profile } from "@/lib/site";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import { profileName } from "@/lib/site";
+import type { Dictionary } from "@/i18n/get-dictionary";
+import type { Locale } from "@/i18n/config";
 
-// ナビのリンク（セクション id と対応）
-const items = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#system-design", label: "System Design" },
-  { href: "#skills", label: "Skills" },
-  { href: "#writing", label: "Writing" },
-  { href: "#contact", label: "Contact" },
-];
+type Props = {
+  dict: Dictionary;
+  locale: Locale;
+};
 
-/**
- * 追従ナビ（上部固定）＋スマホ用メニュー。
- * - PC: 横並びリンク
- * - スマホ: ハンバーガー → 全画面メニュー
- */
-export function Nav() {
+export function Nav({ dict, locale }: Props) {
   const [open, setOpen] = useState(false);
 
-  // メニューを開いている間は背面スクロールを止める
+  const items = [
+    { href: "#about", label: dict.nav.about },
+    { href: "#services", label: dict.nav.services },
+    { href: "#projects", label: dict.nav.projects },
+    { href: "#skills", label: dict.nav.skills },
+    { href: "#writing", label: dict.nav.writing },
+    { href: "#contact", label: dict.nav.contact },
+  ];
+
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -29,7 +30,6 @@ export function Nav() {
     };
   }, [open]);
 
-  // Esc キーで閉じる
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpen(false);
@@ -42,10 +42,10 @@ export function Nav() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/80 backdrop-blur">
       <nav className="container-content flex h-16 items-center justify-between">
         <a href="#top" className="font-sans text-sm font-bold tracking-tight">
-          {profile.name}
+          {profileName}
         </a>
 
-        {/* PC 用リンク */}
+        {/* Desktop */}
         <ul className="hidden items-center gap-8 md:flex">
           {items.map((item) => (
             <li key={item.href}>
@@ -54,21 +54,24 @@ export function Nav() {
               </a>
             </li>
           ))}
+          <li>
+            <LanguageSwitcher locale={locale} />
+          </li>
         </ul>
 
-        {/* スマホ用：開閉ボタン */}
+        {/* Mobile toggle */}
         <button
           type="button"
-          aria-label={open ? "メニューを閉じる" : "メニューを開く"}
+          aria-label={open ? dict.nav.menuClose : dict.nav.menuOpen}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
           className="label-mono md:hidden"
         >
-          {open ? "CLOSE" : "MENU"}
+          {open ? dict.nav.close : dict.nav.menu}
         </button>
       </nav>
 
-      {/* スマホ用：全画面メニュー */}
+      {/* Mobile overlay */}
       {open && (
         <div className="fixed inset-0 top-16 z-40 bg-paper md:hidden">
           <ul className="container-content flex flex-col gap-2 py-8">
@@ -83,6 +86,9 @@ export function Nav() {
                 </a>
               </li>
             ))}
+            <li className="pt-4">
+              <LanguageSwitcher locale={locale} />
+            </li>
           </ul>
         </div>
       )}

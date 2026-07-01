@@ -5,12 +5,21 @@ import { links } from "@/lib/site";
 
 type Status = "idle" | "sending" | "success" | "error" | "not_configured";
 
-/**
- * お問い合わせフォーム。
- * 送信先メールは API 側の環境変数（CONTACT_EMAIL）で管理する。
- * メール/プロバイダ未設定のときは not_configured を返し、代替導線を案内する。
- */
-export function ContactForm() {
+type ContactFormDict = {
+  name: string;
+  email: string;
+  message: string;
+  send: string;
+  sending: string;
+  successTitle: string;
+  successBody: string;
+  notConfiguredTitle: string;
+  notConfiguredBody: string;
+  errorDefault: string;
+  errorNetwork: string;
+};
+
+export function ContactForm({ dict }: { dict: ContactFormDict }) {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -41,20 +50,18 @@ export function ContactForm() {
         return;
       }
       setStatus("error");
-      setErrorMsg(body?.error ?? "送信に失敗しました。時間をおいて再度お試しください。");
+      setErrorMsg(body?.error ?? dict.errorDefault);
     } catch {
       setStatus("error");
-      setErrorMsg("ネットワークエラーが発生しました。");
+      setErrorMsg(dict.errorNetwork);
     }
   }
 
   if (status === "success") {
     return (
       <div role="status" className="card max-w-xl">
-        <p className="font-sans text-xl font-bold">Thank you.</p>
-        <p className="mt-2 text-muted">
-          メッセージを受け取りました。折り返しご連絡します。
-        </p>
+        <p className="font-sans text-xl font-bold">{dict.successTitle}</p>
+        <p className="mt-2 text-muted">{dict.successBody}</p>
       </div>
     );
   }
@@ -62,11 +69,8 @@ export function ContactForm() {
   if (status === "not_configured") {
     return (
       <div role="status" className="card max-w-xl">
-        <p className="font-sans text-xl font-bold">準備中です</p>
-        <p className="mt-2 text-muted">
-          お問い合わせフォームは現在準備中です。お急ぎの場合は GitHub または
-          LinkedIn からご連絡ください。
-        </p>
+        <p className="font-sans text-xl font-bold">{dict.notConfiguredTitle}</p>
+        <p className="mt-2 text-muted">{dict.notConfiguredBody}</p>
         <div className="mt-5 flex flex-wrap gap-3">
           <a href={links.github} target="_blank" rel="noreferrer" className="btn btn-secondary">
             GitHub
@@ -83,7 +87,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="max-w-xl space-y-6" noValidate>
       <div>
         <label htmlFor="name" className="label-mono mb-2 block">
-          Name *
+          {dict.name}
         </label>
         <input
           id="name"
@@ -97,7 +101,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="email" className="label-mono mb-2 block">
-          Email *
+          {dict.email}
         </label>
         <input
           id="email"
@@ -111,7 +115,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className="label-mono mb-2 block">
-          Message *
+          {dict.message}
         </label>
         <textarea
           id="message"
@@ -122,7 +126,7 @@ export function ContactForm() {
         />
       </div>
 
-      {/* スパム避け（人間には見えない蜜壺フィールド） */}
+      {/* Honeypot */}
       <div aria-hidden className="hidden">
         <label htmlFor="company">Company</label>
         <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
@@ -135,7 +139,7 @@ export function ContactForm() {
       )}
 
       <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
-        {status === "sending" ? "Sending…" : "Send Message"}
+        {status === "sending" ? dict.sending : dict.send}
       </button>
     </form>
   );
