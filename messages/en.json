@@ -74,6 +74,7 @@
     "eyebrow": "Projects",
     "title": "Professional Projects",
     "description": "End-to-end projects — from identifying challenges to design, development, and launch.",
+    "viewAll": "View All Projects",
     "labels": {
       "overview": "Overview",
       "challenge": "Challenge",
@@ -82,60 +83,53 @@
       "role": "Role",
       "techStack": "Tech Stack"
     },
-    "items": [
-      {
-        "slug": "livvy",
+    "items": {
+      "livvy": {
         "name": "Livvy",
-        "url": "https://livvy.jp/",
         "category": "Corporate Website",
         "overview": "Planning, design, and development of a corporate website reflecting the brand identity. Implemented responsive design and SEO optimization.",
         "challenge": "The client needed a website that accurately communicates their brand appeal and provides a great user experience.",
         "solution": "Built a responsive WordPress site with SEO best practices, ensuring clear messaging and accessibility across all devices.",
         "result": "Website launched.",
         "role": ["Planning", "Design", "WordPress Development", "Responsive Design", "SEO"],
-        "techStack": ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
-        "cta": { "label": "Visit Website", "href": "https://livvy.jp/" }
+        "cta": "Visit Website"
       },
-      {
-        "slug": "nagase",
+      "nagase": {
         "name": "Nagase",
-        "url": "https://nagase-ltd.co.jp/",
         "category": "Corporate Website",
         "overview": "Planning, design, and development of a corporate website to communicate company information and services.",
         "challenge": "A professional website was needed to effectively convey the company's credibility and service strengths.",
         "solution": "Developed with WordPress, implementing clean layouts, responsive design, and SEO optimization.",
         "result": "Website launched.",
         "role": ["Planning", "Design", "WordPress Development", "Responsive Design", "SEO"],
-        "techStack": ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
-        "cta": { "label": "Visit Website", "href": "https://nagase-ltd.co.jp/" }
+        "cta": "Visit Website"
       },
-      {
-        "slug": "gym-landing-page",
+      "gym-landing-page": {
         "name": "Gym Landing Page",
-        "url": "https://seamlessly.site/gym/",
         "category": "Landing Page",
         "overview": "UI design and front-end development of a landing page for gym customer acquisition.",
         "challenge": "An engaging page design was needed to effectively convert visitors into gym members.",
         "solution": "Designed with a mobile-first approach, implementing clear CTAs and a compelling, conversion-focused layout.",
         "result": "Website launched.",
         "role": ["UI Design", "Front-end Development", "Responsive Design"],
-        "techStack": ["HTML", "CSS", "JavaScript"],
-        "cta": { "label": "Visit Website", "href": "https://seamlessly.site/gym/" }
+        "cta": "Visit Website"
       },
-      {
-        "slug": "u2-official-store",
+      "u2-official-store": {
         "name": "U2 Official Store",
-        "url": "https://u2official.store/",
         "category": "E-commerce",
         "overview": "Store setup, UI design, and product management for an official online store.",
         "challenge": "An e-commerce site was needed that expresses the brand identity while providing a smooth shopping experience.",
         "solution": "Built on Shopify with brand-aligned UI customization and organized product catalog management.",
         "result": "Store launched.",
         "role": ["Store Setup", "UI Design", "Product Management"],
-        "techStack": ["Shopify"],
-        "cta": { "label": "Visit Store", "href": "https://u2official.store/" }
+        "cta": "Visit Store"
       }
-    ]
+    }
+  },
+  "projectsPage": {
+    "title": "All Projects",
+    "back": "← Back",
+    "description": "A complete list of projects I've worked on."
   },
   "systemDesign": {
     "eyebrow": "System Design",

@@ -1,11 +1,13 @@
+import Link from "next/link";
 import { Nav } from "@/components/nav";
 import { RevealScript } from "@/components/reveal-script";
 import { Section } from "@/components/section";
-import { CaseStudy, type CaseStudyItem } from "@/components/case-study";
+import { CaseStudy } from "@/components/case-study";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { profileName, links } from "@/lib/site";
+import { getFeaturedItems } from "@/lib/projects";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }));
@@ -127,11 +129,19 @@ export default async function Home({
           description={dict.projects.description}
         >
           <div className="space-y-24">
-            {(dict.projects.items as CaseStudyItem[]).map((project) => (
+            {getFeaturedItems(dict).map((project) => (
               <div key={project.slug} className="reveal">
                 <CaseStudy project={project} labels={dict.projects.labels} />
               </div>
             ))}
+          </div>
+          <div className="mt-16 text-center reveal">
+            <Link
+              href={`/${locale}/projects`}
+              className="btn btn-secondary"
+            >
+              {dict.projects.viewAll} →
+            </Link>
           </div>
         </Section>
 

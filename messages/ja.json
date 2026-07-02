@@ -74,6 +74,7 @@
     "eyebrow": "Projects",
     "title": "Professional Projects",
     "description": "課題の発見から設計・実装・公開まで、一貫して手がけたプロジェクト。",
+    "viewAll": "すべてのプロジェクトを見る",
     "labels": {
       "overview": "Overview",
       "challenge": "Challenge",
@@ -82,60 +83,53 @@
       "role": "Role",
       "techStack": "Tech Stack"
     },
-    "items": [
-      {
-        "slug": "livvy",
+    "items": {
+      "livvy": {
         "name": "Livvy",
-        "url": "https://livvy.jp/",
         "category": "Corporate Website",
         "overview": "企業のブランドイメージを反映したコーポレートサイトの企画・デザイン・開発。レスポンシブ対応とSEO最適化を実施。",
         "challenge": "ブランドの魅力を的確に伝え、ユーザーにとって使いやすいサイトが求められた。",
         "solution": "WordPressで構築し、レスポンシブデザインとSEO対策を施したサイトを設計・開発。",
         "result": "サイト公開済み。",
         "role": ["企画", "デザイン", "WordPress開発", "レスポンシブ対応", "SEO"],
-        "techStack": ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
-        "cta": { "label": "サイトを見る", "href": "https://livvy.jp/" }
+        "cta": "サイトを見る"
       },
-      {
-        "slug": "nagase",
+      "nagase": {
         "name": "Nagase",
-        "url": "https://nagase-ltd.co.jp/",
         "category": "Corporate Website",
         "overview": "企業情報や事業内容を発信するコーポレートサイトの企画・デザイン・開発。",
         "challenge": "企業の信頼性とサービスの強みを効果的に訴求するWebサイトが必要だった。",
         "solution": "WordPressを採用し、見やすいレイアウトとレスポンシブ対応、SEO最適化を実装。",
         "result": "サイト公開済み。",
         "role": ["企画", "デザイン", "WordPress開発", "レスポンシブ対応", "SEO"],
-        "techStack": ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
-        "cta": { "label": "サイトを見る", "href": "https://nagase-ltd.co.jp/" }
+        "cta": "サイトを見る"
       },
-      {
-        "slug": "gym-landing-page",
+      "gym-landing-page": {
         "name": "Gym Landing Page",
-        "url": "https://seamlessly.site/gym/",
         "category": "Landing Page",
         "overview": "ジムの集客を目的としたランディングページのUIデザインとフロントエンド開発。",
         "challenge": "訪問者をスムーズに入会へ導く、説得力のあるページデザインが求められた。",
         "solution": "モバイルファーストで設計し、明確なCTAと訴求力のあるレイアウトを実装。",
         "result": "サイト公開済み。",
         "role": ["UIデザイン", "フロントエンド開発", "レスポンシブ対応"],
-        "techStack": ["HTML", "CSS", "JavaScript"],
-        "cta": { "label": "サイトを見る", "href": "https://seamlessly.site/gym/" }
+        "cta": "サイトを見る"
       },
-      {
-        "slug": "u2-official-store",
+      "u2-official-store": {
         "name": "U2 Official Store",
-        "url": "https://u2official.store/",
         "category": "E-commerce",
         "overview": "公式オンラインストアの立ち上げ。UIデザインと商品管理を担当。",
         "challenge": "ブランドの世界観を表現しつつ、スムーズな購買体験を提供するECサイトが必要だった。",
         "solution": "Shopifyを活用してストアを構築し、ブランドに合わせたUIカスタマイズと商品カタログを整備。",
         "result": "ストア公開済み。",
         "role": ["ストア構築", "UIデザイン", "商品管理"],
-        "techStack": ["Shopify"],
-        "cta": { "label": "ストアを見る", "href": "https://u2official.store/" }
+        "cta": "ストアを見る"
       }
-    ]
+    }
+  },
+  "projectsPage": {
+    "title": "All Projects",
+    "back": "← 戻る",
+    "description": "これまでに手がけたプロジェクトの一覧。"
   },
   "systemDesign": {
     "eyebrow": "System Design",
