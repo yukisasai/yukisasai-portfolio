@@ -79,7 +79,7 @@ export function Nav({ dict, locale }: Props) {
           isHidden ? "-translate-y-full" : "translate-y-0"
         }`}
       >
-        <nav className="container-content relative flex h-14 items-center justify-center sm:h-16">
+        <nav className="container-content relative flex h-14 items-center justify-end sm:h-16">
           {/* Logo — left */}
           <Link
             href={`/${locale}`}
@@ -96,7 +96,7 @@ export function Nav({ dict, locale }: Props) {
             />
           </Link>
 
-          {/* Desktop — center */}
+          {/* Desktop — right */}
           <ul className="hidden items-center gap-6 lg:flex lg:gap-8">
             {items.map((item) => (
               <li key={item.href}>
