@@ -3,8 +3,8 @@
 // 翻訳テキストは messages/ja.json, messages/en.json で管理。
 // =============================================================
 
-/** 本番公開URL（OGP / canonical の基準。独自ドメイン取得後に差し替え） */
-export const siteUrl = "https://yukisasai-portfolio.vercel.app";
+/** 本番公開URL（OGP / canonical の基準） */
+export const siteUrl = "https://yuki-creatives.com";
 
 /** プロフィール名（言語問わず固定） */
 export const profileName = "Yuki Sasai";

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Hanken_Grotesk, Noto_Sans_JP, JetBrains_Mono } from "next/font/google";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
-import { siteUrl, profileName } from "@/lib/site";
+import { siteUrl, profileName, links } from "@/lib/site";
 import "@/app/globals.css";
 
 const sans = Hanken_Grotesk({
@@ -102,9 +102,22 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   const dict = await getDictionary(locale as Locale);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: profileName,
+    url: `${siteUrl}/${locale}`,
+    jobTitle: "AI Product Engineer",
+    sameAs: [links.github, links.linkedin, links.zenn],
+  };
+
   return (
     <html lang={locale} className={`${sans.variable} ${jp.variable} ${mono.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <a href="#top" className="skip-link">
           {dict.skipLink}
         </a>

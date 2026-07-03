@@ -6,7 +6,7 @@ AIとWeb技術で、世界で学び、地域へ価値を届ける。
 ## Links
 
 - GitHub: https://github.com/yukisasai
-- Portfolio: https://yukisasai-portfolio.vercel.app
+- Portfolio: https://yuki-creatives.com
 - Zenn: https://zenn.dev/seamlessly
 - LinkedIn: https://www.linkedin.com/in/%E8%A3%95%E5%B8%8C-%E4%BD%90%E3%80%85%E4%BA%95-031837235/
 
