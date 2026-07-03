@@ -118,9 +118,25 @@ export function Nav({ dict, locale }: Props) {
           aria-label={open ? dict.nav.menuClose : dict.nav.menuOpen}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="absolute right-4 flex h-10 w-10 items-center justify-center label-mono sm:right-6 lg:hidden"
+          className="absolute right-4 flex h-11 w-11 items-center justify-center rounded-md transition-colors hover:bg-neutral-100 active:bg-neutral-100 sm:right-6 lg:hidden"
         >
-          {open ? dict.nav.close : dict.nav.menu}
+          <span className="relative flex h-5 w-5 flex-col items-center justify-center">
+            <span
+              className={`absolute h-[1.5px] w-5 bg-ink transition-all duration-300 ${
+                open ? "rotate-45" : "-translate-y-[5px]"
+              }`}
+            />
+            <span
+              className={`absolute h-[1.5px] w-5 bg-ink transition-opacity duration-300 ${
+                open ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute h-[1.5px] w-5 bg-ink transition-all duration-300 ${
+                open ? "-rotate-45" : "translate-y-[5px]"
+              }`}
+            />
+          </span>
         </button>
       </nav>
 
