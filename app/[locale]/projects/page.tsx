@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
 import { CaseStudy } from "@/components/case-study";
-import { LanguageSwitcher } from "@/components/language-switcher";
 import { RevealScript } from "@/components/reveal-script";
 import { Section } from "@/components/section";
 import { i18n, type Locale } from "@/i18n/config";
@@ -45,15 +45,10 @@ export default async function ProjectsPage({
 
   return (
     <>
+      <Nav dict={dict} locale={locale as Locale} />
       <RevealScript />
-      <main id="top" className="min-h-screen py-20 sm:py-24">
-        <div className="container-content flex items-center justify-between">
-          <Link href={`/${locale}`} className="label-mono link-underline">
-            {dict.projectsPage.back}
-          </Link>
-          <LanguageSwitcher locale={locale as Locale} />
-        </div>
 
+      <main id="top" className="min-h-screen pt-14 sm:pt-16">
         <Section
           id="projects"
           eyebrow={dict.projects.eyebrow}
@@ -68,6 +63,8 @@ export default async function ProjectsPage({
             ))}
           </div>
         </Section>
+
+        <Footer locale={locale as Locale} />
       </main>
     </>
   );

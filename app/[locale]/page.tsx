@@ -3,7 +3,7 @@ import { Nav } from "@/components/nav";
 import { RevealScript } from "@/components/reveal-script";
 import { Section } from "@/components/section";
 import { CaseStudy } from "@/components/case-study";
-import { LanguageSwitcher } from "@/components/language-switcher";
+import { Footer } from "@/components/footer";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { profileName, links } from "@/lib/site";
@@ -35,7 +35,7 @@ export default async function Home({
 
       <main id="top" className="pt-14 sm:pt-16">
         {/* ---------- Hero ---------- */}
-        <section className="container-content flex min-h-[80vh] flex-col justify-center py-16 sm:min-h-[82vh] sm:py-24">
+        <section className="container-content flex min-h-[42vh] flex-col justify-center py-16 sm:min-h-[82vh] sm:py-24">
           <p className="eyebrow mb-4 sm:mb-6">{dict.hero.role}</p>
           <h1 className="font-sans text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
             {profileName}
@@ -301,71 +301,7 @@ export default async function Home({
         </Section>
 
         {/* ---------- Footer ---------- */}
-        <footer className="border-t border-line">
-          <div className="container-content flex flex-col gap-4 py-8 sm:py-10 md:flex-row md:items-center md:justify-between">
-            <p className="label-mono">© {profileName}</p>
-            <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-6">
-              <ul className="flex flex-wrap gap-x-5 gap-y-2 sm:gap-x-6">
-                <li>
-                  <Link href={`/${locale}/now`} className="label-mono link-underline">
-                    Now
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/uses`} className="label-mono link-underline">
-                    Uses
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/updates`} className="label-mono link-underline">
-                    Updates
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/learning`} className="label-mono link-underline">
-                    Learning
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/blog`} className="label-mono link-underline">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <a
-                    href={links.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="label-mono link-underline"
-                  >
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={links.linkedin}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="label-mono link-underline"
-                  >
-                    LinkedIn
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={links.zenn}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="label-mono link-underline"
-                  >
-                    Zenn
-                  </a>
-                </li>
-              </ul>
-              <LanguageSwitcher locale={locale as Locale} />
-            </div>
-          </div>
-        </footer>
+        <Footer locale={locale as Locale} />
       </main>
     </>
   );
