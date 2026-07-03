@@ -40,8 +40,9 @@ export function Nav({ dict, locale }: Props) {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/80 backdrop-blur">
-      <nav className="container-content flex h-16 items-center justify-between">
-        <a href={`/${locale}`} className="flex items-center">
+      <nav className="container-content relative flex h-16 items-center justify-center">
+        {/* Logo — left */}
+        <a href={`/${locale}`} className="absolute left-6 flex items-center">
           <Image
             src="/logo.png"
             alt={profileName}
@@ -52,7 +53,7 @@ export function Nav({ dict, locale }: Props) {
           />
         </a>
 
-        {/* Desktop */}
+        {/* Desktop — center */}
         <ul className="hidden items-center gap-8 md:flex">
           {items.map((item) => (
             <li key={item.href}>
@@ -66,13 +67,13 @@ export function Nav({ dict, locale }: Props) {
           </li>
         </ul>
 
-        {/* Mobile toggle */}
+        {/* Mobile toggle — right */}
         <button
           type="button"
           aria-label={open ? dict.nav.menuClose : dict.nav.menuOpen}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="label-mono md:hidden"
+          className="absolute right-6 label-mono md:hidden"
         >
           {open ? dict.nav.close : dict.nav.menu}
         </button>
