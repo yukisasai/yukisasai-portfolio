@@ -94,8 +94,14 @@
 
   /* セクション共通の上下余白（余白多め） */
   .section {
-    padding-block: 6rem;
+    padding-block: 4rem;
     border-top: 1px solid var(--line);
+  }
+
+  @media (min-width: 640px) {
+    .section {
+      padding-block: 6rem;
+    }
   }
 
   @media (min-width: 768px) {
@@ -173,18 +179,25 @@
     }
   }
 
-  /* ボタン（CTA）：丸みのあるピル型 */
+  /* ボタン（CTA）：丸みのあるピル型 — 44px min-height for touch targets */
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
     font-family: var(--font-sans), system-ui, sans-serif;
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     font-weight: 500;
     border-radius: 999px;
-    padding: 0.7rem 1.4rem;
+    padding: 0.65rem 1.2rem;
+    min-height: 44px;
     transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  }
+  @media (min-width: 640px) {
+    .btn {
+      font-size: 0.95rem;
+      padding: 0.7rem 1.4rem;
+    }
   }
   .btn-primary {
     background: var(--ink);
@@ -204,6 +217,11 @@
     .btn {
       transition: none;
     }
+  }
+
+  /* チップの最小タッチターゲット */
+  .chip {
+    min-height: 32px;
   }
 
   /* 下線が静かに伸びるリンク */

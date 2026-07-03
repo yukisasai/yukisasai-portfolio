@@ -8,6 +8,7 @@ tech: [WordPress, PHP, HTML, CSS, JavaScript]
 website: "https://livvy.jp/"
 summary: "Planning, design, and development of a corporate website reflecting the brand identity. Implemented responsive design and SEO optimization."
 role: [Planning, Design, WordPress Development, Responsive Design, SEO]
+image: "/projects/livvy.png"
 cta: "Visit Website"
 ---
 

@@ -1,0 +1,32 @@
+{
+  "steps": [
+    {
+      "title": { "ja": "Discovery", "en": "Discovery" },
+      "description": { "ja": "ビジネス課題・ユーザーニーズ・競合の理解", "en": "Understanding business challenges, user needs, and the competitive landscape" }
+    },
+    {
+      "title": { "ja": "Planning", "en": "Planning" },
+      "description": { "ja": "要件定義・技術選定・アーキテクチャ設計", "en": "Requirements definition, technology selection, and architecture design" }
+    },
+    {
+      "title": { "ja": "Design", "en": "Design" },
+      "description": { "ja": "UI/UXデザイン・プロトタイピング・レビュー", "en": "UI/UX design, prototyping, and iterative review" }
+    },
+    {
+      "title": { "ja": "Development", "en": "Development" },
+      "description": { "ja": "クリーンなコード・レスポンシブ・パフォーマンス最適化", "en": "Clean code, responsive implementation, and performance optimization" }
+    },
+    {
+      "title": { "ja": "Testing", "en": "Testing" },
+      "description": { "ja": "クロスブラウザ・モバイル・アクセシビリティテスト", "en": "Cross-browser, mobile, and accessibility testing" }
+    },
+    {
+      "title": { "ja": "Launch", "en": "Launch" },
+      "description": { "ja": "デプロイ・SEO対策・パフォーマンス確認", "en": "Deployment, SEO optimization, and performance verification" }
+    },
+    {
+      "title": { "ja": "Support", "en": "Support" },
+      "description": { "ja": "運用・保守・継続的な改善", "en": "Maintenance, monitoring, and continuous improvement" }
+    }
+  ]
+}

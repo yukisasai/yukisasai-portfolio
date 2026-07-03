@@ -15,6 +15,7 @@ function toItem(p: Awaited<ReturnType<typeof getAllProjects>>[number]): CaseStud
     role: p.role,
     techStack: p.tech,
     cta: { label: p.cta, href: p.website },
+    image: p.image,
     contentHtml: p.contentHtml,
   };
 }

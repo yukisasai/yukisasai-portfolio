@@ -1,11 +1,58 @@
 {
   "steps": [
-    { "year": "2019", "title": { "ja": "Web制作を開始", "en": "Started Web Development" } },
-    { "year": null, "title": { "ja": "WordPress開発", "en": "WordPress Development" } },
-    { "year": null, "title": { "ja": "コーポレートサイト制作", "en": "Corporate Websites" } },
-    { "year": null, "title": { "ja": "Shopify / EC", "en": "Shopify / EC" } },
-    { "year": null, "title": { "ja": "システム開発", "en": "System Development" } },
-    { "year": null, "title": { "ja": "AI Product Engineering", "en": "AI Product Engineering" } },
-    { "year": "Now", "title": { "ja": "AIプロダクト開発", "en": "Building AI-powered Products" } }
+    {
+      "year": "2019",
+      "title": { "ja": "広告代理店", "en": "Ad Agency" },
+      "description": { "ja": "Meta広告運用・クリエイティブ制作・キャンペーン最適化", "en": "Meta Ads operation, creative production, campaign optimization" },
+      "milestone": true
+    },
+    {
+      "year": null,
+      "title": { "ja": "独立・フリーランス", "en": "Independent / Freelance" },
+      "description": { "ja": "Web制作を中心に独立", "en": "Went independent, focusing on web development" },
+      "milestone": true
+    },
+    {
+      "year": null,
+      "title": { "ja": "50+ Web制作プロジェクト", "en": "50+ Web Projects Delivered" },
+      "description": { "ja": "コーポレートサイト・LP・採用サイトなど多業種", "en": "Corporate sites, landing pages, recruitment sites across industries" },
+      "milestone": false
+    },
+    {
+      "year": null,
+      "title": { "ja": "WordPress開発", "en": "WordPress Development" },
+      "description": { "ja": "テーマ開発・カスタマイズ・運用", "en": "Theme development, customization, and maintenance" },
+      "milestone": false
+    },
+    {
+      "year": null,
+      "title": { "ja": "Shopify / EC", "en": "Shopify / E-commerce" },
+      "description": { "ja": "ECサイト構築・商品管理・UI設計", "en": "Store setup, product management, UI design" },
+      "milestone": false
+    },
+    {
+      "year": null,
+      "title": { "ja": "Next.js / TypeScript", "en": "Next.js / TypeScript" },
+      "description": { "ja": "モダンフロントエンドへ移行", "en": "Transition to modern frontend stack" },
+      "milestone": true
+    },
+    {
+      "year": null,
+      "title": { "ja": "System Design", "en": "System Design" },
+      "description": { "ja": "スケーラブルなプロダクト設計を学習", "en": "Learning scalable product architecture" },
+      "milestone": false
+    },
+    {
+      "year": null,
+      "title": { "ja": "AI Product Development", "en": "AI Product Development" },
+      "description": { "ja": "LLM・RAG・プロンプトエンジニアリング", "en": "LLM, RAG, prompt engineering" },
+      "milestone": true
+    },
+    {
+      "year": "Now",
+      "title": { "ja": "Global AI Product Engineer", "en": "Global AI Product Engineer" },
+      "description": { "ja": "AIとWebの融合で世界へ", "en": "Bridging AI and Web for global impact" },
+      "milestone": true
+    }
   ]
 }

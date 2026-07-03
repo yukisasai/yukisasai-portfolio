@@ -1,16 +1,60 @@
 {
   "groups": [
     {
-      "label": { "ja": "Web Development", "en": "Web Development" },
-      "items": ["WordPress", "PHP", "HTML", "CSS", "JavaScript", "Shopify"]
+      "label": { "ja": "Frontend", "en": "Frontend" },
+      "items": [
+        { "name": "TypeScript", "icon": "ts" },
+        { "name": "React", "icon": "react" },
+        { "name": "Next.js", "icon": "nextjs" },
+        { "name": "Tailwind CSS", "icon": "tailwind" },
+        { "name": "HTML", "icon": "html" },
+        { "name": "CSS", "icon": "css" }
+      ]
     },
     {
-      "label": { "ja": "Modern Frontend", "en": "Modern Frontend" },
-      "items": ["TypeScript", "React", "Next.js", "Tailwind CSS"]
+      "label": { "ja": "Backend", "en": "Backend" },
+      "items": [
+        { "name": "Node.js", "icon": "node" },
+        { "name": "Python", "icon": "python" },
+        { "name": "PHP", "icon": "php" }
+      ]
     },
     {
-      "label": { "ja": "AI / Backend", "en": "AI / Backend" },
-      "items": ["Python", "Node.js", "Supabase / Postgres", "Vercel", "LLM Apps", "RAG"]
+      "label": { "ja": "CMS", "en": "CMS" },
+      "items": [
+        { "name": "WordPress", "icon": "wordpress" },
+        { "name": "Shopify", "icon": "shopify" }
+      ]
+    },
+    {
+      "label": { "ja": "Database", "en": "Database" },
+      "items": [
+        { "name": "PostgreSQL", "icon": "postgres" },
+        { "name": "Supabase", "icon": "supabase" }
+      ]
+    },
+    {
+      "label": { "ja": "Cloud", "en": "Cloud" },
+      "items": [
+        { "name": "Vercel", "icon": "vercel" },
+        { "name": "GitHub", "icon": "github" }
+      ]
+    },
+    {
+      "label": { "ja": "Tools", "en": "Tools" },
+      "items": [
+        { "name": "Figma", "icon": "figma" },
+        { "name": "VS Code", "icon": "vscode" },
+        { "name": "Git", "icon": "git" }
+      ]
+    },
+    {
+      "label": { "ja": "AI", "en": "AI" },
+      "items": [
+        { "name": "LLM Apps", "icon": "ai" },
+        { "name": "RAG", "icon": "ai" },
+        { "name": "Claude", "icon": "ai" }
+      ]
     }
   ]
 }

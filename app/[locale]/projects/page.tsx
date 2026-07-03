@@ -46,7 +46,7 @@ export default async function ProjectsPage({
   return (
     <>
       <RevealScript />
-      <main id="top" className="min-h-screen py-24">
+      <main id="top" className="min-h-screen py-20 sm:py-24">
         <div className="container-content flex items-center justify-between">
           <Link href={`/${locale}`} className="label-mono link-underline">
             {dict.projectsPage.back}
@@ -60,10 +60,10 @@ export default async function ProjectsPage({
           title={dict.projectsPage.title}
           description={dict.projectsPage.description}
         >
-          <div className="space-y-24">
+          <div className="space-y-16 sm:space-y-24">
             {projects.map((project) => (
               <div key={project.slug} className="reveal">
-                <CaseStudy project={project} labels={dict.projects.labels} />
+                <CaseStudy project={project} labels={dict.projects.labels} locale={locale} />
               </div>
             ))}
           </div>

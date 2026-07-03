@@ -8,6 +8,7 @@ tech: [WordPress, PHP, HTML, CSS, JavaScript]
 website: "https://nagase-ltd.co.jp/"
 summary: "Planning, design, and development of a corporate website to communicate company information and services."
 role: [Planning, Design, WordPress Development, Responsive Design, SEO]
+image: "/projects/nagase.png"
 cta: "Visit Website"
 ---
 

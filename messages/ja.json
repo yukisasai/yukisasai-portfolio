@@ -50,6 +50,14 @@
     "eyebrow": "Career",
     "title": "Career Timeline"
   },
+  "process": {
+    "eyebrow": "Process",
+    "title": "プロダクトの作り方"
+  },
+  "github": {
+    "eyebrow": "GitHub",
+    "title": "GitHub Activity"
+  },
   "services": {
     "eyebrow": "Services",
     "title": "お手伝いできること"

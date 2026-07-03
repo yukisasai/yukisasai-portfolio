@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export type CaseStudyItem = {
   slug: string;
   name: string;
@@ -26,116 +28,71 @@ export type CaseStudyLabels = {
 export function CaseStudy({
   project,
   labels,
+  locale,
 }: {
   project: CaseStudyItem;
   labels: CaseStudyLabels;
+  locale: string;
 }) {
-  const hostname = (() => {
-    try {
-      return new URL(project.url).hostname;
-    } catch {
-      return project.url;
-    }
-  })();
-
   return (
-    <article className="border-t border-line pt-16 first:border-t-0 first:pt-0">
-      {/* Image */}
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noreferrer"
+    <article className="border-t border-line pt-12 first:border-t-0 first:pt-0 sm:pt-16">
+      {/* Image — links to detail page */}
+      <Link
+        href={`/${locale}/projects/${project.slug}`}
         className="group block"
       >
         {project.image ? (
-          <div className="overflow-hidden rounded-2xl border border-line">
+          <div className="overflow-hidden rounded-xl border border-line sm:rounded-2xl">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={project.image}
               alt={project.name}
+              loading="lazy"
+              decoding="async"
               className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
             />
           </div>
         ) : (
-          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-line bg-neutral-50 transition-colors duration-300 group-hover:bg-neutral-100">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-xl border border-line bg-neutral-50 transition-colors duration-300 group-hover:bg-neutral-100 sm:rounded-2xl">
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-1">
-              <span className="font-sans text-lg font-bold text-neutral-300">
+              <span className="font-sans text-base font-bold text-neutral-300 sm:text-lg">
                 {project.name}
               </span>
-              <span className="label-mono !text-neutral-300">{hostname}</span>
             </div>
           </div>
         )}
-      </a>
+      </Link>
 
       {/* Category + Name */}
-      <p className="eyebrow mt-10">{project.category}</p>
-      <h3 className="mt-2 font-sans text-3xl font-bold sm:text-4xl">
-        {project.name}
-      </h3>
+      <p className="eyebrow mt-6 sm:mt-10">{project.category}</p>
+      <Link href={`/${locale}/projects/${project.slug}`}>
+        <h3 className="mt-1.5 font-sans text-2xl font-bold transition-colors hover:text-muted sm:mt-2 sm:text-3xl md:text-4xl">
+          {project.name}
+        </h3>
+      </Link>
 
       {/* Overview */}
-      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:mt-6 sm:text-lg">
         {project.overview}
       </p>
 
-      {/* Challenge / Solution / Result — or Markdown content */}
-      {project.contentHtml ? (
-        <div
-          className="prose mt-10"
-          dangerouslySetInnerHTML={{ __html: project.contentHtml }}
-        />
-      ) : (
-        <dl className="mt-10 grid gap-8 sm:grid-cols-3">
-          <div>
-            <dt className="label-mono mb-2">{labels.challenge}</dt>
-            <dd className="leading-relaxed">{project.challenge}</dd>
-          </div>
-          <div>
-            <dt className="label-mono mb-2">{labels.solution}</dt>
-            <dd className="leading-relaxed">{project.solution}</dd>
-          </div>
-          <div>
-            <dt className="label-mono mb-2">{labels.result}</dt>
-            <dd className="leading-relaxed">{project.result}</dd>
-          </div>
-        </dl>
-      )}
-
-      {/* Role + Tech Stack */}
-      <div className="mt-10 grid gap-8 sm:grid-cols-2">
-        <div>
-          <p className="label-mono mb-3">{labels.role}</p>
-          <ul className="space-y-1.5">
-            {project.role.map((r) => (
-              <li key={r} className="text-muted">
-                {r}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <p className="label-mono mb-3">{labels.techStack}</p>
-          <ul className="flex flex-wrap gap-2">
-            {project.techStack.map((t) => (
-              <li key={t} className="chip">
-                {t}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      {/* Tech Stack */}
+      <ul className="mt-4 flex flex-wrap gap-1.5 sm:mt-6 sm:gap-2">
+        {project.techStack.map((t) => (
+          <li key={t} className="chip">
+            {t}
+          </li>
+        ))}
+      </ul>
 
       {/* CTA */}
-      <div className="mt-10">
-        <a
-          href={project.cta.href}
-          target="_blank"
-          rel="noreferrer"
+      <div className="mt-6 sm:mt-8">
+        <Link
+          href={`/${locale}/projects/${project.slug}`}
           className="btn btn-secondary"
         >
-          {project.cta.label} →
-        </a>
+          {labels.overview} →
+        </Link>
       </div>
     </article>
   );

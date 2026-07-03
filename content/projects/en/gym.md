@@ -8,6 +8,7 @@ tech: [HTML, CSS, JavaScript]
 website: "https://seamlessly.site/gym/"
 summary: "UI design and front-end development of a landing page for gym customer acquisition."
 role: [UI Design, Front-end Development, Responsive Design]
+image: "/projects/gym.png"
 cta: "Visit Website"
 ---
 

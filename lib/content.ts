@@ -55,6 +55,7 @@ export type ProjectFrontmatter = {
   summary: string;
   role: string[];
   cta: string;
+  image?: string;
 };
 
 export type ProjectEntry = ProjectFrontmatter & {
@@ -114,6 +115,23 @@ export async function getFeaturedProjects(
 ): Promise<ProjectEntry[]> {
   const all = await getAllProjects(locale);
   return all.filter((p) => p.featured);
+}
+
+export async function getProjectBySlug(
+  locale: string,
+  slug: string,
+): Promise<ProjectEntry | null> {
+  const all = await getAllProjects(locale);
+  return all.find((p) => p.slug === slug) ?? null;
+}
+
+export function getProjectSlugs(): string[] {
+  const dir = path.join(contentDir, "projects", i18n.defaultLocale);
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".md"))
+    .map((f) => f.replace(/\.md$/, ""));
 }
 
 // ---------------------------------------------------------------------------
@@ -226,7 +244,6 @@ export type LearningEntry = LearningFrontmatter & {
 export async function getLearningTopics(
   locale: string,
 ): Promise<LearningEntry[]> {
-  const raw = resolveContent;
   const dir = path.join(contentDir, "learning", locale);
   const fallbackDir = path.join(contentDir, "learning", i18n.defaultLocale);
   const targetDir = fs.existsSync(dir) && fs.readdirSync(dir).length > 0 ? dir : fallbackDir;

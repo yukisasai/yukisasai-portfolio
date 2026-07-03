@@ -8,6 +8,7 @@ tech: [WordPress, PHP, HTML, CSS, JavaScript]
 website: "https://nagase-ltd.co.jp/"
 summary: "企業情報や事業内容を発信するコーポレートサイトの企画・デザイン・開発。"
 role: [企画, デザイン, WordPress開発, レスポンシブ対応, SEO]
+image: "/projects/nagase.png"
 cta: "サイトを見る"
 ---
 

@@ -2,6 +2,7 @@ import techStackData from "@/data/tech-stack.json";
 import careerData from "@/data/career.json";
 import servicesData from "@/data/services.json";
 import usesData from "@/data/uses.json";
+import processData from "@/data/process.json";
 
 type Localized = { ja: string; en: string };
 
@@ -13,15 +14,23 @@ function resolve(obj: Localized, locale: string): string {
 // Tech Stack
 // ---------------------------------------------------------------------------
 
+export type TechItem = {
+  name: string;
+  icon: string;
+};
+
 export type TechGroup = {
   label: string;
-  items: string[];
+  items: TechItem[];
 };
 
 export function getTechStack(locale: string): TechGroup[] {
   return techStackData.groups.map((g) => ({
     label: resolve(g.label as unknown as Localized, locale),
-    items: g.items,
+    items: g.items.map((item) => ({
+      name: item.name,
+      icon: item.icon,
+    })),
   }));
 }
 
@@ -32,12 +41,16 @@ export function getTechStack(locale: string): TechGroup[] {
 export type CareerStep = {
   year: string | null;
   title: string;
+  description: string;
+  milestone: boolean;
 };
 
 export function getCareerSteps(locale: string): CareerStep[] {
   return careerData.steps.map((s) => ({
     year: s.year,
     title: resolve(s.title as unknown as Localized, locale),
+    description: resolve(s.description as unknown as Localized, locale),
+    milestone: s.milestone,
   }));
 }
 
@@ -72,5 +85,21 @@ export function getUses(locale: string): UsesItem[] {
     name: item.name,
     category: resolve(item.category as unknown as Localized, locale),
     description: resolve(item.description as unknown as Localized, locale),
+  }));
+}
+
+// ---------------------------------------------------------------------------
+// Process
+// ---------------------------------------------------------------------------
+
+export type ProcessStep = {
+  title: string;
+  description: string;
+};
+
+export function getProcessSteps(locale: string): ProcessStep[] {
+  return processData.steps.map((s) => ({
+    title: resolve(s.title as unknown as Localized, locale),
+    description: resolve(s.description as unknown as Localized, locale),
   }));
 }
