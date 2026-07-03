@@ -69,12 +69,12 @@ export default async function ContactPage({
 
       <main id="top" className="min-h-screen pt-14 sm:pt-16">
         {/* Hero */}
-        <section className="container-content py-16 sm:py-24">
+        <section className="container-content py-16 text-center sm:py-24">
           <p className="eyebrow mb-3 sm:mb-4 reveal">{dict.contactPage.title}</p>
           <h1 className="font-sans text-3xl font-bold reveal sm:text-4xl md:text-5xl">
             {dict.contact.title}
           </h1>
-          <p className="mt-4 max-w-xl text-base text-muted reveal sm:text-lg">
+          <p className="mt-4 mx-auto max-w-xl text-base text-muted reveal sm:text-lg">
             {dict.contactPage.description}
           </p>
         </section>
@@ -82,22 +82,24 @@ export default async function ContactPage({
         {/* -------- ① Contact Form (Primary) -------- */}
         <section className="border-t border-line">
           <div className="container-content py-12 sm:py-20">
-            <div className="reveal">
-              <div className="flex items-center gap-3">
-                <p className="eyebrow">{dict.contactPage.formSection.eyebrow}</p>
-                <span className="rounded-full bg-ink px-2.5 py-0.5 font-mono text-[10px] font-medium tracking-wider text-paper uppercase">
-                  {dict.contactPage.formSection.recommended}
-                </span>
+            <div className="mx-auto max-w-xl">
+              <div className="reveal text-center">
+                <div className="flex items-center justify-center gap-3">
+                  <p className="eyebrow">{dict.contactPage.formSection.eyebrow}</p>
+                  <span className="rounded-full bg-ink px-2.5 py-0.5 font-mono text-[10px] font-medium tracking-wider text-paper uppercase">
+                    {dict.contactPage.formSection.recommended}
+                  </span>
+                </div>
+                <h2 className="mt-3 font-sans text-2xl font-bold sm:text-3xl">
+                  {dict.contactPage.formSection.title}
+                </h2>
+                <p className="mt-3 text-base text-muted">
+                  {dict.contactPage.formSection.description}
+                </p>
               </div>
-              <h2 className="mt-3 font-sans text-2xl font-bold sm:text-3xl">
-                {dict.contactPage.formSection.title}
-              </h2>
-              <p className="mt-3 max-w-lg text-base text-muted">
-                {dict.contactPage.formSection.description}
-              </p>
-            </div>
-            <div className="mt-10 reveal">
-              <ContactForm dict={dict.contactForm} />
+              <div className="mt-10 reveal">
+                <ContactForm dict={dict.contactForm} />
+              </div>
             </div>
           </div>
         </section>

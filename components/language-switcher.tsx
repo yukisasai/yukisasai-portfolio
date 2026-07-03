@@ -16,7 +16,7 @@ export function LanguageSwitcher({ locale, variant = "light" }: Props) {
   const isDark = variant === "dark";
 
   return (
-    <div className="flex items-center gap-1.5 label-mono">
+    <div className="flex items-center gap-1.5 label-mono leading-none">
       {i18n.locales.map((l, idx) => (
         <span key={l} className="inline-flex items-center gap-1.5">
           {idx > 0 && (

@@ -97,12 +97,12 @@ export function Nav({ dict, locale }: Props) {
           </Link>
 
           {/* Desktop — right */}
-          <ul className="hidden items-center gap-6 lg:flex lg:gap-8">
+          <ul className="hidden h-full items-stretch gap-6 lg:flex lg:gap-8">
             {items.map((item) => (
-              <li key={item.href}>
+              <li key={item.href} className="flex items-center">
                 <a
                   href={item.href}
-                  className={`label-mono link-underline ${
+                  className={`label-mono link-underline leading-none ${
                     isActive(item.href) ? "text-ink font-medium" : ""
                   }`}
                 >
@@ -110,7 +110,7 @@ export function Nav({ dict, locale }: Props) {
                 </a>
               </li>
             ))}
-            <li>
+            <li className="flex items-center">
               <LanguageSwitcher locale={locale} />
             </li>
           </ul>

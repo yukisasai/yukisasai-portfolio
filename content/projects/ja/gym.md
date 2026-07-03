@@ -2,7 +2,7 @@
 title: "Gym Landing Page"
 category: "Landing Page"
 status: published
-publishedAt: "2023-03-01"
+publishedAt: "2022-12-01"
 featured: true
 tech: [HTML, CSS, JavaScript]
 website: "https://seamlessly.site/gym/"
