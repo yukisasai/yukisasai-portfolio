@@ -114,7 +114,23 @@
   "contactPage": {
     "title": "Contact",
     "back": "← Back",
-    "description": "Web development, AI product development, and workflow automation — feel free to reach out."
+    "description": "Web development, AI product development, and workflow automation — feel free to reach out.",
+    "formSection": {
+      "eyebrow": "Contact Form",
+      "title": "Discuss Your Project",
+      "description": "Project consultation, estimates, system development, web development — feel free to reach out.",
+      "recommended": "Recommended"
+    },
+    "chatSection": {
+      "eyebrow": "Quick Chat",
+      "title": "Start a Conversation",
+      "description": "Want to chat casually first? Send a DM."
+    },
+    "emailSection": {
+      "eyebrow": "Email",
+      "title": "Send an Email",
+      "description": "For email inquiries."
+    }
   },
   "contactForm": {
     "name": "Name *",

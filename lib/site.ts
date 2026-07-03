@@ -9,10 +9,14 @@ export const siteUrl = "https://yuki-creatives.com";
 /** プロフィール名（言語問わず固定） */
 export const profileName = "Yuki Sasai";
 
+/** メールアドレス */
+export const email = "contact@yuki-creatives.com";
+
 /** 外部リンク */
 export const links = {
   github: "https://github.com/yukisasai",
   linkedin:
     "https://www.linkedin.com/in/%E8%A3%95%E5%B8%8C-%E4%BD%90%E3%80%85%E4%BA%95-031837235/",
+  x: "https://x.com/seamlessly_yuki",
   zenn: "https://zenn.dev/seamlessly",
 };

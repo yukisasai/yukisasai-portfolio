@@ -114,7 +114,23 @@
   "contactPage": {
     "title": "Contact",
     "back": "← 戻る",
-    "description": "Web制作、AIプロダクト開発、業務効率化——お気軽にご連絡ください。"
+    "description": "Web制作、AIプロダクト開発、業務効率化——お気軽にご連絡ください。",
+    "formSection": {
+      "eyebrow": "Contact Form",
+      "title": "プロジェクトについて相談する",
+      "description": "プロジェクト相談・見積依頼・システム開発・Web制作など、お気軽にご連絡ください。",
+      "recommended": "推奨"
+    },
+    "chatSection": {
+      "eyebrow": "Quick Chat",
+      "title": "気軽に相談する",
+      "description": "まずはカジュアルに話したい方はDMでどうぞ。"
+    },
+    "emailSection": {
+      "eyebrow": "Email",
+      "title": "メールで連絡する",
+      "description": "メールでのお問い合わせはこちら。"
+    }
   },
   "contactForm": {
     "name": "お名前 *",

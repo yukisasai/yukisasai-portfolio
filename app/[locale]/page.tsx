@@ -65,7 +65,7 @@ export default async function Home({
             {dict.numbers.items.map(
               (item: { value: string; label: string }, i: number) => (
                 <div key={i} className="reveal text-center">
-                  <p className="font-sans text-2xl font-bold sm:text-3xl md:text-4xl">
+                  <p className="font-sans text-2xl font-bold whitespace-nowrap sm:text-3xl md:text-4xl">
                     {item.value}
                   </p>
                   <p className="label-mono mt-2">{item.label}</p>
