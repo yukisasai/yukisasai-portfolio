@@ -166,7 +166,7 @@ export function Nav({ dict, locale }: Props) {
 
           {/* Slide-in panel */}
           <nav
-            className={`absolute inset-y-0 right-0 flex w-[280px] flex-col bg-[#161616] transition-transform duration-300 ease-out sm:w-[320px] ${
+            className={`absolute inset-y-0 right-0 flex w-[320px] flex-col bg-[#161616] transition-transform duration-300 ease-out sm:w-[380px] ${
               open ? "translate-x-0" : "translate-x-full"
             }`}
           >
