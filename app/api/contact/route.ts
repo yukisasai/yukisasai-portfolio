@@ -1,15 +1,31 @@
 import { NextResponse } from "next/server";
 
-// お問い合わせ送信 API。
-// 送信先・送信元・APIキーはすべて環境変数で管理（リポジトリに値は持たない）。
-//   CONTACT_EMAIL  … 受信先メール（例: hello@yukisasai.com）※将来設定
-//   CONTACT_FROM   … 送信元（Resend で検証済みドメインのアドレス）
-//   RESEND_API_KEY … Resend の API キー
-// いずれか未設定なら 503 not_configured を返し、フロントで代替導線を案内する。
+// Rate limiting — simple in-memory store (resets on deploy)
+const rateMap = new Map<string, { count: number; reset: number }>();
+const RATE_LIMIT = 5; // max requests
+const RATE_WINDOW = 60 * 60 * 1000; // 1 hour
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateMap.get(ip);
+  if (!entry || now > entry.reset) {
+    rateMap.set(ip, { count: 1, reset: now + RATE_WINDOW });
+    return false;
+  }
+  entry.count++;
+  return entry.count > RATE_LIMIT;
+}
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(req: Request) {
+  // Rate limiting
+  const forwarded = req.headers.get("x-forwarded-for");
+  const ip = forwarded?.split(",")[0]?.trim() ?? "unknown";
+  if (isRateLimited(ip)) {
+    return NextResponse.json({ error: "rate_limited" }, { status: 429 });
+  }
+
   let data: Record<string, unknown>;
   try {
     data = await req.json();
@@ -22,12 +38,12 @@ export async function POST(req: Request) {
   const message = String(data.message ?? "").trim();
   const company = String(data.company ?? "").trim(); // honeypot
 
-  // ボットは静かに成功扱い（蜜壺に入力があれば送信しない）
+  // Honeypot — bots get silent success
   if (company) {
     return NextResponse.json({ ok: true });
   }
 
-  // バリデーション
+  // Validation
   if (!name || !email || !message) {
     return NextResponse.json({ error: "missing_fields" }, { status: 400 });
   }
@@ -39,7 +55,6 @@ export async function POST(req: Request) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.CONTACT_FROM ?? "Portfolio <onboarding@resend.dev>";
 
-  // メール送信が未設定なら、ここで明示的に知らせる
   if (!to || !apiKey) {
     return NextResponse.json({ error: "not_configured" }, { status: 503 });
   }

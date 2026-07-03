@@ -173,6 +173,10 @@
     outline: none;
     border-color: var(--ink);
   }
+  .field:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
   @media (prefers-reduced-motion: reduce) {
     .field {
       transition: none;
@@ -205,6 +209,10 @@
   }
   .btn-primary:hover {
     opacity: 0.85;
+  }
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
   .btn-secondary {
     border: 1px solid var(--line);

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { links } from "@/lib/site";
 
 type Status = "idle" | "sending" | "success" | "error" | "not_configured";
@@ -22,9 +22,14 @@ type ContactFormDict = {
 export function ContactForm({ dict }: { dict: ContactFormDict }) {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const submitting = useRef(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    // Double-submit prevention
+    if (submitting.current) return;
+    submitting.current = true;
     setStatus("sending");
     setErrorMsg("");
 
@@ -49,17 +54,29 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
         setStatus("not_configured");
         return;
       }
+      if (res.status === 429) {
+        setStatus("error");
+        setErrorMsg(dict.errorDefault);
+        return;
+      }
       setStatus("error");
       setErrorMsg(body?.error ?? dict.errorDefault);
     } catch {
       setStatus("error");
       setErrorMsg(dict.errorNetwork);
+    } finally {
+      submitting.current = false;
     }
   }
 
   if (status === "success") {
     return (
       <div role="status" className="card max-w-xl">
+        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-neutral-50">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-ink" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </div>
         <p className="font-sans text-xl font-bold">{dict.successTitle}</p>
         <p className="mt-2 text-muted">{dict.successBody}</p>
       </div>
@@ -83,6 +100,8 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
     );
   }
 
+  const isSending = status === "sending";
+
   return (
     <form onSubmit={handleSubmit} className="max-w-xl space-y-6" noValidate>
       <div>
@@ -95,6 +114,7 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
           type="text"
           required
           autoComplete="name"
+          disabled={isSending}
           className="field"
         />
       </div>
@@ -109,6 +129,7 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
           type="email"
           required
           autoComplete="email"
+          disabled={isSending}
           className="field"
         />
       </div>
@@ -122,6 +143,7 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
           name="message"
           required
           rows={6}
+          disabled={isSending}
           className="field resize-y"
         />
       </div>
@@ -138,8 +160,23 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
         </p>
       )}
 
-      <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
-        {status === "sending" ? dict.sending : dict.send}
+      <button
+        type="submit"
+        className="btn btn-primary"
+        disabled={isSending}
+        aria-disabled={isSending}
+      >
+        {isSending ? (
+          <span className="flex items-center gap-2">
+            <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" opacity="0.25" />
+              <path d="M4 12a8 8 0 018-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+            {dict.sending}
+          </span>
+        ) : (
+          dict.send
+        )}
       </button>
     </form>
   );
