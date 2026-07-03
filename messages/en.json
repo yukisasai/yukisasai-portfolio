@@ -10,6 +10,8 @@
     "projects": "Projects",
     "skills": "Skills",
     "writing": "Writing",
+    "now": "Now",
+    "uses": "Uses",
     "contact": "Contact",
     "menu": "MENU",
     "close": "CLOSE",
@@ -46,30 +48,11 @@
   },
   "career": {
     "eyebrow": "Career",
-    "title": "Career Timeline",
-    "steps": [
-      { "year": "2019", "title": "Started Web Development" },
-      { "year": null, "title": "WordPress Development" },
-      { "year": null, "title": "Corporate Websites" },
-      { "year": null, "title": "Shopify / EC" },
-      { "year": null, "title": "System Development" },
-      { "year": null, "title": "AI Product Engineering" },
-      { "year": "Now", "title": "Building AI-powered Products" }
-    ]
+    "title": "Career Timeline"
   },
   "services": {
     "eyebrow": "Services",
-    "title": "What I Can Help With",
-    "items": [
-      { "name": "WordPress Website", "badge": null },
-      { "name": "Corporate Website", "badge": null },
-      { "name": "Landing Page", "badge": null },
-      { "name": "Shopify", "badge": null },
-      { "name": "Website Renewal", "badge": null },
-      { "name": "System Development", "badge": null },
-      { "name": "SEO Optimization", "badge": null },
-      { "name": "AI Integration", "badge": "Coming Soon" }
-    ]
+    "title": "What I Can Help With"
   },
   "projects": {
     "eyebrow": "Projects",
@@ -83,48 +66,6 @@
       "result": "Result",
       "role": "Role",
       "techStack": "Tech Stack"
-    },
-    "items": {
-      "livvy": {
-        "name": "Livvy",
-        "category": "Corporate Website",
-        "overview": "Planning, design, and development of a corporate website reflecting the brand identity. Implemented responsive design and SEO optimization.",
-        "challenge": "The client needed a website that accurately communicates their brand appeal and provides a great user experience.",
-        "solution": "Built a responsive WordPress site with SEO best practices, ensuring clear messaging and accessibility across all devices.",
-        "result": "Website launched.",
-        "role": ["Planning", "Design", "WordPress Development", "Responsive Design", "SEO"],
-        "cta": "Visit Website"
-      },
-      "nagase": {
-        "name": "Nagase",
-        "category": "Corporate Website",
-        "overview": "Planning, design, and development of a corporate website to communicate company information and services.",
-        "challenge": "A professional website was needed to effectively convey the company's credibility and service strengths.",
-        "solution": "Developed with WordPress, implementing clean layouts, responsive design, and SEO optimization.",
-        "result": "Website launched.",
-        "role": ["Planning", "Design", "WordPress Development", "Responsive Design", "SEO"],
-        "cta": "Visit Website"
-      },
-      "gym-landing-page": {
-        "name": "Gym Landing Page",
-        "category": "Landing Page",
-        "overview": "UI design and front-end development of a landing page for gym customer acquisition.",
-        "challenge": "An engaging page design was needed to effectively convert visitors into gym members.",
-        "solution": "Designed with a mobile-first approach, implementing clear CTAs and a compelling, conversion-focused layout.",
-        "result": "Website launched.",
-        "role": ["UI Design", "Front-end Development", "Responsive Design"],
-        "cta": "Visit Website"
-      },
-      "u2-official-store": {
-        "name": "U2 Official Store",
-        "category": "E-commerce",
-        "overview": "Store setup, UI design, and product management for an official online store.",
-        "challenge": "An e-commerce site was needed that expresses the brand identity while providing a smooth shopping experience.",
-        "solution": "Built on Shopify with brand-aligned UI customization and organized product catalog management.",
-        "result": "Store launched.",
-        "role": ["Store Setup", "UI Design", "Product Management"],
-        "cta": "Visit Store"
-      }
     }
   },
   "projectsPage": {
@@ -148,21 +89,7 @@
   },
   "skills": {
     "eyebrow": "Skills",
-    "title": "Skills",
-    "groups": [
-      {
-        "label": "Web Development",
-        "items": ["WordPress", "PHP", "HTML", "CSS", "JavaScript", "Shopify"]
-      },
-      {
-        "label": "Modern Frontend",
-        "items": ["TypeScript", "React", "Next.js", "Tailwind CSS"]
-      },
-      {
-        "label": "AI / Backend",
-        "items": ["Python", "Node.js", "Supabase / Postgres", "Vercel", "LLM Apps", "RAG"]
-      }
-    ]
+    "title": "Skills"
   },
   "writing": {
     "eyebrow": "Writing & Learning",
@@ -193,5 +120,32 @@
     "notConfiguredBody": "The contact form is currently being set up. In the meantime, please reach out via GitHub or LinkedIn.",
     "errorDefault": "Failed to send. Please try again later.",
     "errorNetwork": "A network error occurred."
+  },
+  "nowPage": {
+    "title": "Now",
+    "back": "← Back",
+    "description": "What I'm working on right now.",
+    "lastUpdated": "Last updated"
+  },
+  "usesPage": {
+    "title": "Uses",
+    "back": "← Back",
+    "description": "My development environment and tools."
+  },
+  "updatesPage": {
+    "title": "Updates",
+    "back": "← Back",
+    "description": "Site update log."
+  },
+  "learningPage": {
+    "title": "Learning",
+    "back": "← Back",
+    "description": "Topics I'm currently learning."
+  },
+  "blogPage": {
+    "title": "Blog",
+    "back": "← Back",
+    "description": "Technical blog.",
+    "empty": "No posts yet."
   }
 }

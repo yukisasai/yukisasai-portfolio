@@ -1,0 +1,12 @@
+{
+  "items": [
+    { "name": { "ja": "WordPress サイト制作", "en": "WordPress Website" }, "badge": null },
+    { "name": { "ja": "コーポレートサイト", "en": "Corporate Website" }, "badge": null },
+    { "name": { "ja": "ランディングページ", "en": "Landing Page" }, "badge": null },
+    { "name": { "ja": "Shopify", "en": "Shopify" }, "badge": null },
+    { "name": { "ja": "サイトリニューアル", "en": "Website Renewal" }, "badge": null },
+    { "name": { "ja": "システム開発", "en": "System Development" }, "badge": null },
+    { "name": { "ja": "SEO 対策", "en": "SEO Optimization" }, "badge": null },
+    { "name": { "ja": "AI 導入支援", "en": "AI Integration" }, "badge": "Coming Soon" }
+  ]
+}

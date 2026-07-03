@@ -77,6 +77,10 @@ export async function generateMetadata({
         "x-default": `/${i18n.defaultLocale}`,
       },
     },
+    icons: {
+      icon: "/favicon.ico",
+      apple: "/apple-icon.png",
+    },
     openGraph: {
       type: "website",
       url: `/${locale}`,

@@ -41,7 +41,7 @@ export default async function ProjectsPage({
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
-  const projects = getAllItems(dict);
+  const projects = await getAllItems(locale);
 
   return (
     <>

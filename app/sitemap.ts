@@ -3,7 +3,7 @@ import { siteUrl } from "@/lib/site";
 import { i18n } from "@/i18n/config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ["", "/projects", "/contact"];
+  const pages = ["", "/projects", "/contact", "/now", "/uses", "/updates", "/learning", "/blog"];
 
   return pages.flatMap((page) =>
     i18n.locales.map((locale) => ({

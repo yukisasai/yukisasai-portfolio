@@ -1,0 +1,11 @@
+{
+  "steps": [
+    { "year": "2019", "title": { "ja": "Web制作を開始", "en": "Started Web Development" } },
+    { "year": null, "title": { "ja": "WordPress開発", "en": "WordPress Development" } },
+    { "year": null, "title": { "ja": "コーポレートサイト制作", "en": "Corporate Websites" } },
+    { "year": null, "title": { "ja": "Shopify / EC", "en": "Shopify / EC" } },
+    { "year": null, "title": { "ja": "システム開発", "en": "System Development" } },
+    { "year": null, "title": { "ja": "AI Product Engineering", "en": "AI Product Engineering" } },
+    { "year": "Now", "title": { "ja": "AIプロダクト開発", "en": "Building AI-powered Products" } }
+  ]
+}

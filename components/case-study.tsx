@@ -11,6 +11,7 @@ export type CaseStudyItem = {
   role: string[];
   techStack: string[];
   cta: { label: string; href: string };
+  contentHtml?: string;
 };
 
 export type CaseStudyLabels = {
@@ -78,21 +79,28 @@ export function CaseStudy({
         {project.overview}
       </p>
 
-      {/* Challenge / Solution / Result */}
-      <dl className="mt-10 grid gap-8 sm:grid-cols-3">
-        <div>
-          <dt className="label-mono mb-2">{labels.challenge}</dt>
-          <dd className="leading-relaxed">{project.challenge}</dd>
-        </div>
-        <div>
-          <dt className="label-mono mb-2">{labels.solution}</dt>
-          <dd className="leading-relaxed">{project.solution}</dd>
-        </div>
-        <div>
-          <dt className="label-mono mb-2">{labels.result}</dt>
-          <dd className="leading-relaxed">{project.result}</dd>
-        </div>
-      </dl>
+      {/* Challenge / Solution / Result — or Markdown content */}
+      {project.contentHtml ? (
+        <div
+          className="prose mt-10"
+          dangerouslySetInnerHTML={{ __html: project.contentHtml }}
+        />
+      ) : (
+        <dl className="mt-10 grid gap-8 sm:grid-cols-3">
+          <div>
+            <dt className="label-mono mb-2">{labels.challenge}</dt>
+            <dd className="leading-relaxed">{project.challenge}</dd>
+          </div>
+          <div>
+            <dt className="label-mono mb-2">{labels.solution}</dt>
+            <dd className="leading-relaxed">{project.solution}</dd>
+          </div>
+          <div>
+            <dt className="label-mono mb-2">{labels.result}</dt>
+            <dd className="leading-relaxed">{project.result}</dd>
+          </div>
+        </dl>
+      )}
 
       {/* Role + Tech Stack */}
       <div className="mt-10 grid gap-8 sm:grid-cols-2">

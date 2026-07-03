@@ -8,6 +8,8 @@ import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { profileName, links } from "@/lib/site";
 import { getFeaturedItems } from "@/lib/projects";
+import { getTechStack, getCareerSteps, getServices } from "@/lib/data";
+import { GitHubActivity } from "@/components/github-activity";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }));
@@ -20,6 +22,10 @@ export default async function Home({
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
+  const featuredProjects = await getFeaturedItems(locale);
+  const techStack = getTechStack(locale);
+  const careerSteps = getCareerSteps(locale);
+  const services = getServices(locale);
 
   return (
     <>
@@ -82,20 +88,15 @@ export default async function Home({
           title={dict.career.title}
         >
           <ol className="relative max-w-xl border-l border-line pl-8">
-            {dict.career.steps.map(
-              (
-                step: { year: string | null; title: string },
-                i: number
-              ) => (
-                <li key={i} className="reveal relative pb-10 last:pb-0">
-                  <span className="absolute -left-8 top-1.5 flex h-3 w-3 -translate-x-1/2 items-center justify-center rounded-full border-2 border-ink bg-paper" />
-                  {step.year && (
-                    <p className="label-mono mb-1">{step.year}</p>
-                  )}
-                  <p className="text-lg font-medium">{step.title}</p>
-                </li>
-              )
-            )}
+            {careerSteps.map((step, i) => (
+              <li key={i} className="reveal relative pb-10 last:pb-0">
+                <span className="absolute -left-8 top-1.5 flex h-3 w-3 -translate-x-1/2 items-center justify-center rounded-full border-2 border-ink bg-paper" />
+                {step.year && (
+                  <p className="label-mono mb-1">{step.year}</p>
+                )}
+                <p className="text-lg font-medium">{step.title}</p>
+              </li>
+            ))}
           </ol>
         </Section>
 
@@ -106,18 +107,16 @@ export default async function Home({
           title={dict.services.title}
         >
           <ul className="grid gap-3 sm:grid-cols-2 md:grid-cols-4">
-            {dict.services.items.map(
-              (item: { name: string; badge: string | null }) => (
-                <li key={item.name} className="card reveal !p-5 text-base">
-                  {item.name}
-                  {item.badge && (
-                    <span className="ml-2 inline-block rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-medium text-neutral-500">
-                      {item.badge}
-                    </span>
-                  )}
-                </li>
-              )
-            )}
+            {services.map((item) => (
+              <li key={item.name} className="card reveal !p-5 text-base">
+                {item.name}
+                {item.badge && (
+                  <span className="ml-2 inline-block rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-medium text-neutral-500">
+                    {item.badge}
+                  </span>
+                )}
+              </li>
+            ))}
           </ul>
         </Section>
 
@@ -129,7 +128,7 @@ export default async function Home({
           description={dict.projects.description}
         >
           <div className="space-y-24">
-            {getFeaturedItems(dict).map((project) => (
+            {featuredProjects.map((project) => (
               <div key={project.slug} className="reveal">
                 <CaseStudy project={project} labels={dict.projects.labels} />
               </div>
@@ -168,20 +167,18 @@ export default async function Home({
           title={dict.skills.title}
         >
           <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
-            {dict.skills.groups.map(
-              (group: { label: string; items: string[] }) => (
-                <div key={group.label} className="reveal">
-                  <h3 className="font-sans text-xl font-bold">{group.label}</h3>
-                  <ul className="mt-4 space-y-2">
-                    {group.items.map((item: string) => (
-                      <li key={item} className="text-muted">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )
-            )}
+            {techStack.map((group) => (
+              <div key={group.label} className="reveal">
+                <h3 className="font-sans text-xl font-bold">{group.label}</h3>
+                <ul className="mt-4 space-y-2">
+                  {group.items.map((item: string) => (
+                    <li key={item} className="text-muted">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </Section>
 
@@ -202,6 +199,15 @@ export default async function Home({
               {dict.writing.cta}
             </a>
           </div>
+        </Section>
+
+        {/* ---------- GitHub ---------- */}
+        <Section
+          id="github"
+          eyebrow="GitHub"
+          title="GitHub Activity"
+        >
+          <GitHubActivity />
         </Section>
 
         {/* ---------- Contact ---------- */}
@@ -229,6 +235,31 @@ export default async function Home({
             <p className="label-mono">© {profileName}</p>
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-6">
               <ul className="flex flex-wrap gap-x-6 gap-y-2">
+                <li>
+                  <Link href={`/${locale}/now`} className="label-mono link-underline">
+                    Now
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`/${locale}/uses`} className="label-mono link-underline">
+                    Uses
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`/${locale}/updates`} className="label-mono link-underline">
+                    Updates
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`/${locale}/learning`} className="label-mono link-underline">
+                    Learning
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`/${locale}/blog`} className="label-mono link-underline">
+                    Blog
+                  </Link>
+                </li>
                 <li>
                   <a
                     href={links.github}

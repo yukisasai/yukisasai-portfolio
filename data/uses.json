@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "name": "MacBook",
+      "category": { "ja": "ハードウェア", "en": "Hardware" },
+      "description": { "ja": "メインの開発マシン", "en": "Main development machine" }
+    },
+    {
+      "name": "VS Code",
+      "category": { "ja": "エディタ", "en": "Editor" },
+      "description": { "ja": "メインのコードエディタ", "en": "Primary code editor" }
+    },
+    {
+      "name": "Claude Code",
+      "category": { "ja": "AI", "en": "AI" },
+      "description": { "ja": "AIペアプログラミング", "en": "AI pair programming" }
+    },
+    {
+      "name": "ChatGPT",
+      "category": { "ja": "AI", "en": "AI" },
+      "description": { "ja": "リサーチ・ブレインストーミング", "en": "Research & brainstorming" }
+    },
+    {
+      "name": "Figma",
+      "category": { "ja": "デザイン", "en": "Design" },
+      "description": { "ja": "UIデザイン・プロトタイピング", "en": "UI design & prototyping" }
+    },
+    {
+      "name": "GitHub",
+      "category": { "ja": "開発ツール", "en": "Dev Tools" },
+      "description": { "ja": "ソースコード管理・CI/CD", "en": "Source control & CI/CD" }
+    },
+    {
+      "name": "Vercel",
+      "category": { "ja": "開発ツール", "en": "Dev Tools" },
+      "description": { "ja": "ホスティング・デプロイ", "en": "Hosting & deployment" }
+    },
+    {
+      "name": "Notion",
+      "category": { "ja": "生産性", "en": "Productivity" },
+      "description": { "ja": "タスク管理・ナレッジベース", "en": "Task management & knowledge base" }
+    },
+    {
+      "name": "Zenn",
+      "category": { "ja": "アウトプット", "en": "Writing" },
+      "description": { "ja": "技術記事の発信", "en": "Publishing technical articles" }
+    },
+    {
+      "name": "X",
+      "category": { "ja": "SNS", "en": "Social" },
+      "description": { "ja": "情報収集・発信", "en": "Information & networking" }
+    },
+    {
+      "name": "LinkedIn",
+      "category": { "ja": "SNS", "en": "Social" },
+      "description": { "ja": "プロフェッショナルネットワーク", "en": "Professional network" }
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { profileName } from "@/lib/site";
@@ -15,12 +16,11 @@ export function Nav({ dict, locale }: Props) {
   const [open, setOpen] = useState(false);
 
   const items = [
-    { href: "#about", label: dict.nav.about },
-    { href: "#services", label: dict.nav.services },
-    { href: "#projects", label: dict.nav.projects },
-    { href: "#skills", label: dict.nav.skills },
+    { href: `/${locale}/projects`, label: dict.nav.projects },
     { href: "#writing", label: dict.nav.writing },
-    { href: "#contact", label: dict.nav.contact },
+    { href: `/${locale}/now`, label: dict.nav.now },
+    { href: `/${locale}/uses`, label: dict.nav.uses },
+    { href: `/${locale}/contact`, label: dict.nav.contact },
   ];
 
   useEffect(() => {
@@ -41,8 +41,15 @@ export function Nav({ dict, locale }: Props) {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/80 backdrop-blur">
       <nav className="container-content flex h-16 items-center justify-between">
-        <a href="#top" className="font-sans text-sm font-bold tracking-tight">
-          {profileName}
+        <a href={`/${locale}`} className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt={profileName}
+            width={104}
+            height={53}
+            className="h-7 w-auto"
+            priority
+          />
         </a>
 
         {/* Desktop */}
