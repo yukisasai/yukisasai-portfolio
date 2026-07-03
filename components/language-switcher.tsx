@@ -4,25 +4,41 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { i18n, localeNames, type Locale } from "@/i18n/config";
 
-export function LanguageSwitcher({ locale }: { locale: Locale }) {
-  const pathname = usePathname();
+type Props = {
+  locale: Locale;
+  variant?: "light" | "dark";
+};
 
-  // Remove current locale prefix to get the base path
+export function LanguageSwitcher({ locale, variant = "light" }: Props) {
+  const pathname = usePathname();
   const pathWithoutLocale = pathname.replace(/^\/(ja|en)/, "") || "/";
+
+  const isDark = variant === "dark";
 
   return (
     <div className="flex items-center gap-1.5 label-mono">
       {i18n.locales.map((l, idx) => (
         <span key={l} className="inline-flex items-center gap-1.5">
           {idx > 0 && (
-            <span aria-hidden className="text-line select-none">/</span>
+            <span
+              aria-hidden
+              className={`select-none ${isDark ? "text-neutral-600" : "text-line"}`}
+            >
+              /
+            </span>
           )}
           {l === locale ? (
-            <span className="text-ink font-medium">{localeNames[l]}</span>
+            <span className={`font-medium ${isDark ? "text-white" : "text-ink"}`}>
+              {localeNames[l]}
+            </span>
           ) : (
             <Link
               href={`/${l}${pathWithoutLocale}`}
-              className="text-muted transition-colors hover:text-ink"
+              className={`transition-colors ${
+                isDark
+                  ? "text-neutral-500 hover:text-white"
+                  : "text-muted hover:text-ink"
+              }`}
               lang={l}
             >
               {localeNames[l]}
