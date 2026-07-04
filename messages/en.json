@@ -107,18 +107,18 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Let's build something together.",
-    "body": "Web development, AI product development, and workflow automation — feel free to reach out.",
-    "cta": "Contact Me"
+    "title": "Web, AI & System Development — Get in Touch",
+    "body": "From websites and WordPress to system development and AI-powered workflow automation — let's talk.",
+    "cta": "Get a Free Consultation"
   },
   "contactPage": {
     "title": "Contact",
     "back": "← Back",
-    "description": "Web development, AI product development, and workflow automation — feel free to reach out.",
+    "description": "From websites and WordPress to system development and AI-powered workflow automation — let's talk.",
     "formSection": {
       "eyebrow": "Contact Form",
       "title": "Discuss Your Project",
-      "description": "Project consultation, estimates, system development, web development — feel free to reach out.",
+      "description": "Consultation and estimates are free. I typically respond within 24 hours.",
       "recommended": "Recommended"
     },
     "chatSection": {
@@ -179,7 +179,7 @@
       "referral": "Referral",
       "other": "Other"
     },
-    "send": "Send Message",
+    "send": "Get a Free Consultation",
     "sending": "Sending…",
     "successTitle": "Thank you for reaching out!",
     "successBody": "Your message has been successfully received. I'll review it and typically respond within 24 hours. If it's urgent, feel free to reach out via LinkedIn or X (DM).",
