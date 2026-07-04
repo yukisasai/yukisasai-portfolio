@@ -133,17 +133,68 @@
     }
   },
   "contactForm": {
-    "name": "Name *",
-    "email": "Email *",
-    "message": "Message *",
+    "requiredSection": "Required",
+    "optionalSection": "Optional (helps me provide a more specific proposal)",
+    "name": "Name",
+    "email": "Email",
+    "category": "Inquiry Type",
+    "message": "Details",
+    "companyName": "Company Name",
+    "companyUrl": "Company Website",
+    "budget": "Budget",
+    "deadline": "Desired Timeline",
+    "referral": "How did you find this site?",
+    "selectPlaceholder": "Please select",
+    "required": "Required",
+    "optional": "Optional",
+    "categoryOptions": {
+      "website": "Website Development",
+      "wordpress": "WordPress Development",
+      "system": "System Development",
+      "ai": "AI & Automation",
+      "uiux": "UI/UX Design",
+      "consulting": "Technical Consulting",
+      "other": "Other"
+    },
+    "budgetOptions": {
+      "undecided": "Undecided",
+      "under10": "Under ¥100K",
+      "10to30": "¥100K – ¥300K",
+      "30to50": "¥300K – ¥500K",
+      "50to100": "¥500K – ¥1M",
+      "over100": "Over ¥1M"
+    },
+    "deadlineOptions": {
+      "asap": "As soon as possible",
+      "within1month": "Within 1 month",
+      "within3months": "Within 3 months",
+      "discuss": "Let's discuss"
+    },
+    "referralOptions": {
+      "google": "Google Search",
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook",
+      "github": "GitHub",
+      "zenn": "Zenn",
+      "referral": "Referral",
+      "other": "Other"
+    },
     "send": "Send Message",
     "sending": "Sending…",
-    "successTitle": "Thank you.",
-    "successBody": "Your message has been received. I'll get back to you soon.",
-    "notConfiguredTitle": "Coming Soon",
-    "notConfiguredBody": "The contact form is currently being set up. In the meantime, please reach out via GitHub or LinkedIn.",
+    "successTitle": "Thank you for reaching out!",
+    "successBody": "Your message has been successfully received. I'll review it and typically respond within 24 hours. If it's urgent, feel free to reach out via LinkedIn or X (DM).",
+    "notConfiguredTitle": "Thank you for reaching out",
+    "notConfiguredBody": "For urgent matters, please contact me below.",
     "errorDefault": "Failed to send. Please try again later.",
-    "errorNetwork": "A network error occurred."
+    "errorNetwork": "A network error occurred.",
+    "validation": {
+      "nameRequired": "Please enter your name.",
+      "emailRequired": "Please enter your email address.",
+      "emailInvalid": "Please enter a valid email address.",
+      "categoryRequired": "Please select an inquiry type.",
+      "messageRequired": "Please enter your message.",
+      "urlInvalid": "Please enter a valid URL."
+    }
   },
   "nowPage": {
     "title": "Now",

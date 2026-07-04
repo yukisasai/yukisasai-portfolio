@@ -133,17 +133,68 @@
     }
   },
   "contactForm": {
-    "name": "お名前 *",
-    "email": "メールアドレス *",
-    "message": "メッセージ *",
+    "requiredSection": "必須項目",
+    "optionalSection": "任意項目（お答えいただけると、より具体的にご提案できます）",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "category": "お問い合わせ種別",
+    "message": "ご相談内容",
+    "companyName": "会社名",
+    "companyUrl": "会社Webサイト",
+    "budget": "ご予算",
+    "deadline": "希望納期",
+    "referral": "このサイトをどこで知りましたか？",
+    "selectPlaceholder": "選択してください",
+    "required": "必須",
+    "optional": "任意",
+    "categoryOptions": {
+      "website": "Webサイト制作",
+      "wordpress": "WordPress制作・改修",
+      "system": "システム開発",
+      "ai": "AI活用・自動化",
+      "uiux": "UI/UXデザイン",
+      "consulting": "技術相談",
+      "other": "その他"
+    },
+    "budgetOptions": {
+      "undecided": "未定",
+      "under10": "〜10万円",
+      "10to30": "10〜30万円",
+      "30to50": "30〜50万円",
+      "50to100": "50〜100万円",
+      "over100": "100万円以上"
+    },
+    "deadlineOptions": {
+      "asap": "できるだけ早く",
+      "within1month": "1ヶ月以内",
+      "within3months": "3ヶ月以内",
+      "discuss": "相談したい"
+    },
+    "referralOptions": {
+      "google": "Google検索",
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook",
+      "github": "GitHub",
+      "zenn": "Zenn",
+      "referral": "紹介",
+      "other": "その他"
+    },
     "send": "送信する",
     "sending": "送信中…",
-    "successTitle": "ありがとうございます。",
-    "successBody": "メッセージを受け取りました。折り返しご連絡します。",
-    "notConfiguredTitle": "準備中です",
-    "notConfiguredBody": "お問い合わせフォームは現在準備中です。お急ぎの場合は GitHub または LinkedIn からご連絡ください。",
+    "successTitle": "お問い合わせありがとうございます！",
+    "successBody": "メッセージを正常に受け付けました。内容を確認し、通常24時間以内にご返信いたします。お急ぎの場合は、LinkedIn または X（DM）よりお気軽にご連絡ください。",
+    "notConfiguredTitle": "お問い合わせありがとうございます",
+    "notConfiguredBody": "お急ぎの場合は、以下からご連絡ください。",
     "errorDefault": "送信に失敗しました。時間をおいて再度お試しください。",
-    "errorNetwork": "ネットワークエラーが発生しました。"
+    "errorNetwork": "ネットワークエラーが発生しました。",
+    "validation": {
+      "nameRequired": "お名前を入力してください。",
+      "emailRequired": "メールアドレスを入力してください。",
+      "emailInvalid": "正しいメールアドレスを入力してください。",
+      "categoryRequired": "お問い合わせ種別を選択してください。",
+      "messageRequired": "ご相談内容を入力してください。",
+      "urlInvalid": "正しいURLを入力してください。"
+    }
   },
   "nowPage": {
     "title": "Now",
