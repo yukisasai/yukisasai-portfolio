@@ -10,6 +10,7 @@ import { profileName, links } from "@/lib/site";
 import { getFeaturedItems } from "@/lib/projects";
 import { getTechStack, getCareerSteps, getServices, getProcessSteps } from "@/lib/data";
 import { GitHubActivity } from "@/components/github-activity";
+import { getZennArticles } from "@/lib/zenn";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }));
@@ -27,6 +28,7 @@ export default async function Home({
   const careerSteps = getCareerSteps(locale);
   const services = getServices(locale);
   const processSteps = getProcessSteps(locale);
+  const zennArticles = await getZennArticles();
 
   return (
     <>
@@ -260,7 +262,35 @@ export default async function Home({
           title={dict.writing.title}
           description={dict.writing.description}
         >
-          <div className="reveal">
+          {zennArticles && zennArticles.length > 0 ? (
+            <ul className="grid gap-4">
+              {zennArticles.map((article) => (
+                <li key={article.url} className="reveal">
+                  <a
+                    href={article.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="card group flex items-baseline justify-between gap-4 !p-5 transition-colors hover:border-accent"
+                  >
+                    <span className="font-medium group-hover:text-accent transition-colors">
+                      {article.title}
+                    </span>
+                    <time
+                      dateTime={article.publishedAt}
+                      className="shrink-0 text-sm text-muted"
+                    >
+                      {new Date(article.publishedAt).toLocaleDateString(locale, {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </time>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+          <div className="mt-8 reveal">
             <a
               href={links.zenn}
               target="_blank"
