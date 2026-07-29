@@ -16,19 +16,22 @@
       "year": null,
       "title": { "ja": "50+ Web制作プロジェクト", "en": "50+ Web Projects Delivered" },
       "description": { "ja": "コーポレートサイト・LP・採用サイトなど多業種", "en": "Corporate sites, landing pages, recruitment sites across industries" },
-      "milestone": false
+      "milestone": false,
+      "icon": "50+"
     },
     {
       "year": null,
       "title": { "ja": "WordPress開発", "en": "WordPress Development" },
       "description": { "ja": "テーマ開発・カスタマイズ・運用", "en": "Theme development, customization, and maintenance" },
-      "milestone": false
+      "milestone": false,
+      "icon": "WP"
     },
     {
       "year": null,
       "title": { "ja": "Shopify / EC", "en": "Shopify / E-commerce" },
       "description": { "ja": "ECサイト構築・商品管理・UI設計", "en": "Store setup, product management, UI design" },
-      "milestone": false
+      "milestone": false,
+      "icon": "EC"
     },
     {
       "year": null,
@@ -40,7 +43,8 @@
       "year": null,
       "title": { "ja": "System Design", "en": "System Design" },
       "description": { "ja": "スケーラブルなプロダクト設計を学習", "en": "Learning scalable product architecture" },
-      "milestone": false
+      "milestone": false,
+      "icon": "SD"
     },
     {
       "year": null,

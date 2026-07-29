@@ -110,11 +110,15 @@ export default async function Home({
                         : "border-line bg-paper"
                     }`}
                   >
-                    {step.milestone && (
+                    {step.milestone ? (
                       <span className="text-xs font-bold sm:text-sm">
                         {step.year ?? "→"}
                       </span>
-                    )}
+                    ) : step.icon ? (
+                      <span className="text-[10px] font-bold text-muted sm:text-xs">
+                        {step.icon}
+                      </span>
+                    ) : null}
                   </span>
                 </div>
 

@@ -43,6 +43,7 @@ export type CareerStep = {
   title: string;
   description: string;
   milestone: boolean;
+  icon?: string;
 };
 
 export function getCareerSteps(locale: string): CareerStep[] {
@@ -51,6 +52,7 @@ export function getCareerSteps(locale: string): CareerStep[] {
     title: resolve(s.title as unknown as Localized, locale),
     description: resolve(s.description as unknown as Localized, locale),
     milestone: s.milestone,
+    icon: (s as Record<string, unknown>).icon as string | undefined,
   }));
 }
 
