@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
 import { PageHeader } from "@/components/page-header";
 import { RevealScript } from "@/components/reveal-script";
 import { i18n, type Locale } from "@/i18n/config";
@@ -42,6 +44,7 @@ export default async function NowPage({
 
   return (
     <>
+      <Nav dict={dict} locale={locale as Locale} />
       <RevealScript />
       <main id="top" className="min-h-screen py-24">
         <PageHeader locale={locale as Locale} backLabel={dict.nowPage.back} />
@@ -68,6 +71,7 @@ export default async function NowPage({
           )}
         </div>
       </main>
+      <Footer locale={locale as Locale} />
     </>
   );
 }

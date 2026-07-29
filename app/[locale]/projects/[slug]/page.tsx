@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
 import { PageHeader } from "@/components/page-header";
 import { CtaImageToggle } from "@/components/cta-image-toggle";
 import { RevealScript } from "@/components/reveal-script";
@@ -77,6 +79,7 @@ export default async function ProjectDetailPage({
 
   return (
     <>
+      <Nav dict={dict} locale={locale as Locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -194,6 +197,7 @@ export default async function ProjectDetailPage({
         {/* Spacer */}
         <div className="pb-16 sm:pb-24" />
       </main>
+      <Footer locale={locale as Locale} />
     </>
   );
 }

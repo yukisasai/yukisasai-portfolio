@@ -170,8 +170,20 @@ export function Nav({ dict, locale }: Props) {
               open ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            {/* Spacer for header height */}
-            <div className="h-14 flex-shrink-0 sm:h-16" />
+            {/* Close button */}
+            <div className="flex h-14 flex-shrink-0 items-center justify-end px-4 sm:h-16 sm:px-6">
+              <button
+                type="button"
+                aria-label={dict.nav.menuClose}
+                onClick={() => setOpen(false)}
+                className="flex h-11 w-11 items-center justify-center rounded-md transition-colors hover:bg-white/10 active:bg-white/10"
+              >
+                <span className="relative flex h-5 w-5 items-center justify-center">
+                  <span className="absolute h-[1.5px] w-5 rotate-45 bg-white" />
+                  <span className="absolute h-[1.5px] w-5 -rotate-45 bg-white" />
+                </span>
+              </button>
+            </div>
 
             {/* Links */}
             <div className="flex flex-1 flex-col px-6 py-8">

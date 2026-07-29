@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
 import { PageHeader } from "@/components/page-header";
 import { RevealScript } from "@/components/reveal-script";
 import { i18n, type Locale } from "@/i18n/config";
@@ -49,6 +51,7 @@ export default async function UsesPage({
 
   return (
     <>
+      <Nav dict={dict} locale={locale as Locale} />
       <RevealScript />
       <main id="top" className="min-h-screen py-24">
         <PageHeader locale={locale as Locale} backLabel={dict.usesPage.back} />
@@ -78,6 +81,7 @@ export default async function UsesPage({
           </div>
         </div>
       </main>
+      <Footer locale={locale as Locale} />
     </>
   );
 }
