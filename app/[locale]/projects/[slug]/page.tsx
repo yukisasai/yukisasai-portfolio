@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/page-header";
+import { CtaImageToggle } from "@/components/cta-image-toggle";
 import { RevealScript } from "@/components/reveal-script";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -153,16 +154,11 @@ export default async function ProjectDetailPage({
         {/* CTA */}
         <section className="container-content mt-10 reveal sm:mt-16">
           {project.ctaImage ? (
-            <div className="overflow-hidden rounded-xl border border-line sm:rounded-2xl">
-              <Image
-                src={project.ctaImage}
-                alt={project.title}
-                width={1280}
-                height={7200}
-                sizes="(max-width: 896px) 100vw, 896px"
-                className="w-full"
-              />
-            </div>
+            <CtaImageToggle
+              label={project.cta}
+              imageSrc={project.ctaImage}
+              imageAlt={project.title}
+            />
           ) : (
             <a
               href={project.website}
