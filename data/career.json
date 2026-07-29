@@ -7,7 +7,7 @@
       "milestone": true
     },
     {
-      "year": null,
+      "year": "2020",
       "title": { "ja": "独立・フリーランス", "en": "Independent / Freelance" },
       "description": { "ja": "Web制作を中心に独立", "en": "Went independent, focusing on web development" },
       "milestone": true
@@ -34,7 +34,7 @@
       "icon": "EC"
     },
     {
-      "year": null,
+      "year": "2023",
       "title": { "ja": "Next.js / TypeScript", "en": "Next.js / TypeScript" },
       "description": { "ja": "モダンフロントエンドへ移行", "en": "Transition to modern frontend stack" },
       "milestone": true
@@ -47,7 +47,7 @@
       "icon": "SD"
     },
     {
-      "year": null,
+      "year": "2024",
       "title": { "ja": "AI Product Development", "en": "AI Product Development" },
       "description": { "ja": "LLM・RAG・プロンプトエンジニアリング", "en": "LLM, RAG, prompt engineering" },
       "milestone": true
