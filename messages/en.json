@@ -130,7 +130,8 @@
       "eyebrow": "Email",
       "title": "Send an Email",
       "description": "For email inquiries."
-    }
+    },
+    "thanksBackHome": "← Back to Home"
   },
   "contactForm": {
     "requiredSection": "Required",

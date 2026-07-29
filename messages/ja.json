@@ -130,7 +130,8 @@
       "eyebrow": "Email",
       "title": "メールで連絡する",
       "description": "メールでのお問い合わせはこちら。"
-    }
+    },
+    "thanksBackHome": "← トップに戻る"
   },
   "contactForm": {
     "requiredSection": "必須項目",

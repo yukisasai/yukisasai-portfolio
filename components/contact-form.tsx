@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useContactSuccess } from "@/components/contact-page-client";
 import { links } from "@/lib/site";
 
 // ---------------------------------------------------------------------------
@@ -125,6 +126,7 @@ function ChevronIcon() {
 // Component
 // ---------------------------------------------------------------------------
 export function ContactForm({ dict }: { dict: ContactFormDict }) {
+  const contactSuccess = useContactSuccess();
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
@@ -177,6 +179,7 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
       if (res.ok) {
         setStatus("success");
         form.reset();
+        contactSuccess?.();
         return;
       }
 
