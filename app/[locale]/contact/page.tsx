@@ -78,7 +78,9 @@ export default async function ContactPage({
             <section className="container-content py-16 text-center sm:py-24">
               <p className="eyebrow mb-3 sm:mb-4 reveal">{dict.contactPage.title}</p>
               <h1 className="font-sans text-3xl font-bold reveal sm:text-4xl md:text-5xl">
-                {dict.contact.title}
+                {dict.contact.title.split("\n").map((line: string, i: number, arr: string[]) => (
+                  <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+                ))}
               </h1>
               <p className="mt-4 mx-auto max-w-xl text-base text-muted reveal sm:text-lg">
                 {dict.contactPage.description}

@@ -22,7 +22,11 @@ export function Section({ id, eyebrow, title, description, children }: SectionPr
       <div className="container-content">
         <header className="max-w-2xl reveal">
           {eyebrow && <p className="eyebrow mb-3 sm:mb-4">{eyebrow}</p>}
-          <h2 id={`${id}-heading`} className="font-sans text-2xl font-bold sm:text-3xl md:text-4xl">{title}</h2>
+          <h2 id={`${id}-heading`} className="font-sans text-2xl font-bold sm:text-3xl md:text-4xl">
+            {title.split("\n").map((line, i, arr) => (
+              <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+            ))}
+          </h2>
           {description && (
             <p className="mt-4 text-lg text-muted">{description}</p>
           )}
