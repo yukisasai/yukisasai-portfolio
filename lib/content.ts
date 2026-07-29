@@ -56,6 +56,7 @@ export type ProjectFrontmatter = {
   role: string[];
   cta: string;
   image?: string;
+  ctaImage?: string;
 };
 
 export type ProjectEntry = ProjectFrontmatter & {

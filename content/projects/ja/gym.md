@@ -9,6 +9,7 @@ website: "https://seamlessly.site/gym/"
 summary: "ジムの集客を目的としたランディングページのUIデザインとフロントエンド開発。"
 role: [UIデザイン, フロントエンド開発, レスポンシブ対応]
 image: "/projects/gym.png"
+ctaImage: "/projects/cs_5_all.png"
 cta: "サイトを見る"
 ---
 

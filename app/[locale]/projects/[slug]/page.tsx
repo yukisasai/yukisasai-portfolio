@@ -152,14 +152,27 @@ export default async function ProjectDetailPage({
 
         {/* CTA */}
         <section className="container-content mt-10 reveal sm:mt-16">
-          <a
-            href={project.website}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-primary"
-          >
-            {project.cta} →
-          </a>
+          {project.ctaImage ? (
+            <div className="overflow-hidden rounded-xl border border-line sm:rounded-2xl">
+              <Image
+                src={project.ctaImage}
+                alt={project.title}
+                width={1280}
+                height={7200}
+                sizes="(max-width: 896px) 100vw, 896px"
+                className="w-full"
+              />
+            </div>
+          ) : (
+            <a
+              href={project.website}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary"
+            >
+              {project.cta} →
+            </a>
+          )}
         </section>
 
         {/* Next Project */}
