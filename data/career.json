@@ -1,13 +1,13 @@
 {
   "steps": [
     {
-      "year": "2019",
+      "year": "2021",
       "title": { "ja": "広告代理店", "en": "Ad Agency" },
       "description": { "ja": "Meta広告運用・クリエイティブ制作・キャンペーン最適化", "en": "Meta Ads operation, creative production, campaign optimization" },
       "milestone": true
     },
     {
-      "year": "2020",
+      "year": "2022",
       "title": { "ja": "独立・フリーランス", "en": "Independent / Freelance" },
       "description": { "ja": "Web制作を中心に独立", "en": "Went independent, focusing on web development" },
       "milestone": true
