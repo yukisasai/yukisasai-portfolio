@@ -2,13 +2,13 @@
 title: "Hakuro Dermatology Clinic"
 category: "Landing Page"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/01-clinic/"
 summary: "Landing page for a beauty dermatology clinic featuring an interactive Before/After slider for treatment results."
 role: [UI Design, Front-end Development]
-image: "/projects/seamlessly.png"
+image: "/projects/01-clinic.jpg"
 cta: "Visit Website"
 ---
 

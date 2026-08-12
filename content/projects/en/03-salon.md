@@ -2,13 +2,13 @@
 title: "Hair Removal Salon Nuka"
 category: "Landing Page"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/03-salon/"
 summary: "Landing page for a hair removal salon with an interactive body-part selector that shows pricing instantly."
 role: [UI Design, Front-end Development]
-image: "/projects/seamlessly.png"
+image: "/projects/03-salon.jpg"
 cta: "Visit Website"
 ---
 

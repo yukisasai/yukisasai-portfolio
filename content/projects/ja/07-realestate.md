@@ -2,13 +2,13 @@
 title: "ガレージハウス 土間の家"
 category: "ランディングページ"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/07-realestate/"
 summary: "ガレージハウスのLP。寸法線つき図面スペックで間取りと広さを正確に伝える仕組みを実装。"
 role: [UIデザイン, フロントエンド開発]
-image: "/projects/seamlessly.png"
+image: "/projects/07-realestate.jpg"
 cta: "サイトを見る"
 ---
 

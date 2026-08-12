@@ -2,13 +2,13 @@
 title: "白露皮膚科クリニック"
 category: "ランディングページ"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/01-clinic/"
 summary: "美容皮膚科のLP。施術のBefore/Afterをスライダーで直感的に比較できるインタラクティブ要素を実装。"
 role: [UIデザイン, フロントエンド開発]
-image: "/projects/seamlessly.png"
+image: "/projects/01-clinic.jpg"
 cta: "サイトを見る"
 ---
 

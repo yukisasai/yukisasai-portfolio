@@ -2,13 +2,13 @@
 title: "BONE ダンススクール"
 category: "ランディングページ"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/10-dance/"
 summary: "ダンススクールのLP。8カウントのビートに合わせた体験演出で、レッスンの雰囲気を体感できる仕組みを実装。"
 role: [UIデザイン, フロントエンド開発]
-image: "/projects/seamlessly.png"
+image: "/projects/10-dance.jpg"
 cta: "サイトを見る"
 ---
 

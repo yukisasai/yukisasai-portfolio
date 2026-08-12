@@ -2,13 +2,13 @@
 title: "BONE Dance School"
 category: "Landing Page"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/10-dance/"
 summary: "Landing page for a dance school with an 8-count beat experience that lets visitors feel the lesson atmosphere."
 role: [UI Design, Front-end Development]
-image: "/projects/seamlessly.png"
+image: "/projects/10-dance.jpg"
 cta: "Visit Website"
 ---
 

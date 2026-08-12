@@ -2,13 +2,13 @@
 title: "Shirabe Medical Weight Loss Clinic"
 category: "Landing Page"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/04-diet/"
 summary: "Landing page for a medical weight loss clinic with a weight-loss pace simulator."
 role: [UI Design, Front-end Development]
-image: "/projects/seamlessly.png"
+image: "/projects/04-diet.jpg"
 cta: "Visit Website"
 ---
 

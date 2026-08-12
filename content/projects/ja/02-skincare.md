@@ -2,13 +2,13 @@
 title: "ハレノヒ スキンケア"
 category: "ランディングページ"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/02-skincare/"
 summary: "スキンケアECのLP。朝の時刻に連動した3ステップ提案で、日常に溶け込むケア習慣を訴求。"
 role: [UIデザイン, フロントエンド開発]
-image: "/projects/seamlessly.png"
+image: "/projects/02-skincare.jpg"
 cta: "サイトを見る"
 ---
 

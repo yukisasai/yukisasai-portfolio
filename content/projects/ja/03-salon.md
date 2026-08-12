@@ -2,13 +2,13 @@
 title: "脱毛サロン ぬか"
 category: "ランディングページ"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/03-salon/"
 summary: "脱毛サロンのLP。部位を選ぶだけで料金がわかるインタラクティブな部位選択チャートを実装。"
 role: [UIデザイン, フロントエンド開発]
-image: "/projects/seamlessly.png"
+image: "/projects/03-salon.jpg"
 cta: "サイトを見る"
 ---
 

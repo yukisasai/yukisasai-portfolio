@@ -2,13 +2,13 @@
 title: "Garage House Doma no Ie"
 category: "Landing Page"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/07-realestate/"
 summary: "Landing page for a garage house property with dimensioned floor plan specs for accurate space visualization."
 role: [UI Design, Front-end Development]
-image: "/projects/seamlessly.png"
+image: "/projects/07-realestate.jpg"
 cta: "Visit Website"
 ---
 

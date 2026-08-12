@@ -2,13 +2,13 @@
 title: "木戸建築設計"
 category: "ランディングページ"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/08-house/"
 summary: "注文住宅のLP。土地探しから引き渡しまでの18ヶ月工程をガントチャートで可視化。"
 role: [UIデザイン, フロントエンド開発]
-image: "/projects/seamlessly.png"
+image: "/projects/08-house.jpg"
 cta: "サイトを見る"
 ---
 

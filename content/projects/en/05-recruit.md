@@ -2,13 +2,13 @@
 title: "Hataraku Karte"
 category: "Landing Page"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/05-recruit/"
 summary: "Landing page for an IT engineer recruitment service with a salary range estimator based on skills."
 role: [UI Design, Front-end Development]
-image: "/projects/seamlessly.png"
+image: "/projects/05-recruit.jpg"
 cta: "Visit Website"
 ---
 

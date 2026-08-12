@@ -2,13 +2,13 @@
 title: "ハタラクカルテ"
 category: "ランディングページ"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/05-recruit/"
 summary: "ITエンジニア転職支援サービスのLP。スキルに応じた年収レンジを試算できる機能を実装。"
 role: [UIデザイン, フロントエンド開発]
-image: "/projects/seamlessly.png"
+image: "/projects/05-recruit.jpg"
 cta: "サイトを見る"
 ---
 

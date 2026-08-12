@@ -2,13 +2,13 @@
 title: "拳心ボクシングジム"
 category: "ランディングページ"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/11-gym/"
 summary: "ボクシングジムのLP。3分ラウンドタイマーでトレーニングの臨場感を体験できる仕組みを実装。"
 role: [UIデザイン, フロントエンド開発]
-image: "/projects/seamlessly.png"
+image: "/projects/11-gym.jpg"
 cta: "サイトを見る"
 ---
 

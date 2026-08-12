@@ -2,13 +2,13 @@
 title: "アオゾラ工機"
 category: "ランディングページ"
 status: published
-publishedAt: "2026-08-12"
+publishedAt: "2022-08-01"
 featured: false
 tech: [HTML, CSS, JavaScript]
 website: "https://portfolio-lp.workers.dev/06-hiring/"
 summary: "製造業の採用LPページ。1日の仕事の流れを24時間タイムラインで可視化し、働くイメージを具体化。"
 role: [UIデザイン, フロントエンド開発]
-image: "/projects/seamlessly.png"
+image: "/projects/06-hiring.jpg"
 cta: "サイトを見る"
 ---
 
