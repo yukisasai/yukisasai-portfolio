@@ -50,6 +50,7 @@
   }
 
   /* 見出しは太めの SF Pro＋字間を詰める（Apple の見出しの作り） */
+  /* 色は指定しない。暗い背景のセクションで text-white が効かなくなるため */
   h1,
   h2,
   h3 {
@@ -57,7 +58,6 @@
     font-weight: 600;
     letter-spacing: -0.022em;
     line-height: 1.15;
-    color: var(--ink);
   }
 
   /* キーボードフォーカスがはっきり見えるように */

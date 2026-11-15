@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { profileName } from "@/lib/site";
 import type { Dictionary } from "@/i18n/get-dictionary";
@@ -17,8 +17,7 @@ type Props = {
 export function Nav({ dict, locale }: Props) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const lastY = useRef(0);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
   const items = [
@@ -32,18 +31,11 @@ export function Nav({ dict, locale }: Props) {
   // Track mount state for CSS transitions (avoid flash on initial render)
   useEffect(() => setMounted(true), []);
 
-  // Scroll-based hide/show
-  const onScroll = useCallback(() => {
-    const y = window.scrollY;
-    if (y > 80 && y > lastY.current) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-    lastY.current = y;
-  }, []);
+  // 上端では透明、少しスクロールしたら背景をぼかして境界線を出す
+  const onScroll = useCallback(() => setScrolled(window.scrollY > 24), []);
 
   useEffect(() => {
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, [onScroll]);
@@ -65,8 +57,6 @@ export function Nav({ dict, locale }: Props) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const isHidden = hidden && !open;
-
   const isActive = (href: string) => {
     if (href.startsWith("#")) return false;
     return pathname === href || pathname.startsWith(href + "/");
@@ -75,8 +65,8 @@ export function Nav({ dict, locale }: Props) {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/80 backdrop-blur transition-transform duration-300 ${
-          isHidden ? "-translate-y-full" : "translate-y-0"
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+          scrolled || open ? "border-b border-line bg-paper/80 backdrop-blur-xl" : ""
         }`}
       >
         <nav className="container-content flex h-14 items-center justify-between sm:h-16">
@@ -87,13 +77,16 @@ export function Nav({ dict, locale }: Props) {
             aria-label={profileName}
           >
             <Image
-              src="/logo.png"
+              src="/seamlessly-logo.webp"
               alt={profileName}
-              width={104}
-              height={53}
-              className="h-6 w-auto sm:h-7"
+              width={308}
+              height={96}
+              className="h-7 w-auto sm:h-8"
               priority
             />
+            <span className="ml-4 hidden text-[11px] tracking-wider2 text-mute sm:inline">
+              {profileName.toUpperCase()}
+            </span>
           </Link>
 
           {/* Desktop — right */}

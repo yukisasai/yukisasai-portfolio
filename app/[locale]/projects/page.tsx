@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
-import { CaseStudy } from "@/components/case-study";
 import { RevealScript } from "@/components/reveal-script";
-import { Section } from "@/components/section";
+import { SectionHeading } from "@/components/section-heading";
+import { ProjectList } from "@/components/project-list";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { getAllItems } from "@/lib/projects";
@@ -48,21 +48,22 @@ export default async function ProjectsPage({
       <Nav dict={dict} locale={locale as Locale} />
       <RevealScript />
 
-      <main id="top" className="min-h-screen pt-14 sm:pt-16">
-        <Section
-          id="projects"
-          eyebrow={dict.projects.eyebrow}
-          title={dict.projectsPage.title}
-          description={dict.projectsPage.description}
-        >
-          <div className="space-y-16 sm:space-y-24">
-            {projects.map((project) => (
-              <div key={project.slug} className="reveal">
-                <CaseStudy project={project} labels={dict.projects.labels} locale={locale} />
-              </div>
-            ))}
+      <main id="top" className="min-h-screen">
+        <section className="container-content pb-28 pt-36 md:pt-44">
+          <SectionHeading
+            en={dict.projectsPage.title}
+            ja={dict.projectsPage.description}
+            count={String(projects.length).padStart(2, "0")}
+          />
+          <div className="mt-12">
+            <ProjectList
+              projects={projects}
+              locale={locale}
+              allLabel={locale === "ja" ? "すべて" : "All"}
+              countLabel={locale === "ja" ? "件" : "works"}
+            />
           </div>
-        </Section>
+        </section>
 
         <Footer locale={locale as Locale} />
       </main>
