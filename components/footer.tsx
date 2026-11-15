@@ -8,7 +8,7 @@ const social = [
   ["Zenn", links.zenn],
   ["GitHub", links.github],
   ["LinkedIn", links.linkedin],
-  ["X", links.x],
+  ["Instagram", links.instagram],
 ] as const;
 
 const pages = ["now", "uses", "updates", "learning", "blog"] as const;

@@ -268,7 +268,7 @@ export default async function Home({
                 </ul>
               )}
               <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-[13px]">
-                {([["GitHub", links.github], ["LinkedIn", links.linkedin], ["X", links.x]] as const)
+                {([["GitHub", links.github], ["LinkedIn", links.linkedin], ["Instagram", links.instagram]] as const)
                   .filter(([, href]) => href)
                   .map(([label, href]) => (
                     <li key={label}>

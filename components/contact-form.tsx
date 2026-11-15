@@ -242,12 +242,12 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
             LinkedIn
           </a>
           <a
-            href={links.x}
+            href={links.instagram}
             target="_blank"
             rel="noreferrer"
             className="btn btn-secondary text-sm"
           >
-            X
+            Instagram
           </a>
         </div>
       </div>

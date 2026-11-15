@@ -90,7 +90,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     name: profileName,
     url: `${siteUrl}/${locale}`,
     jobTitle: "AI Product Engineer",
-    sameAs: [links.github, links.linkedin, links.x, links.zenn],
+    sameAs: [links.github, links.linkedin, links.instagram, links.zenn],
   };
 
   return (

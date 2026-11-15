@@ -66,12 +66,12 @@ export function ContactPageClient({
             LinkedIn
           </a>
           <a
-            href={links.x}
+            href={links.instagram}
             target="_blank"
             rel="noreferrer"
             className="btn btn-secondary"
           >
-            X
+            Instagram
           </a>
         </div>
       </main>
