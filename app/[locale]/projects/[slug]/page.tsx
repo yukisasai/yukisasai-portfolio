@@ -97,10 +97,10 @@ export default async function ProjectDetailPage({
         {/* Hero */}
         <section className="container-content mt-8 reveal sm:mt-10">
           <p className="eyebrow">{project.category}</p>
-          <h1 className="mt-2 font-sans text-3xl font-bold sm:mt-3 sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="mt-2 display text-3xl sm:mt-3 sm:text-4xl md:text-5xl lg:text-6xl">
             {project.title}
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:mt-6 sm:text-xl">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-mute sm:mt-6 sm:text-xl">
             {project.summary}
           </p>
         </section>
@@ -108,7 +108,7 @@ export default async function ProjectDetailPage({
         {/* Hero Image */}
         {project.image && (
           <section className="container-content mt-8 reveal sm:mt-12">
-            <div className="overflow-hidden rounded-xl border border-line sm:rounded-2xl">
+            <div className="overflow-hidden rounded-[18px] border border-line">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -183,10 +183,10 @@ export default async function ProjectDetailPage({
                 href={`/${locale}/projects/${nextProject.slug}`}
                 className="group block"
               >
-                <h2 className="font-sans text-2xl font-bold transition-colors group-hover:text-muted sm:text-3xl md:text-4xl">
+                <h2 className="display text-2xl transition-colors group-hover:text-mute sm:text-3xl md:text-4xl">
                   {nextProject.title} →
                 </h2>
-                <p className="mt-1.5 text-base text-muted sm:mt-2 sm:text-lg">
+                <p className="mt-1.5 text-base text-mute sm:mt-2 sm:text-lg">
                   {nextProject.category}
                 </p>
               </Link>

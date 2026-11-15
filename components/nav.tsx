@@ -79,11 +79,11 @@ export function Nav({ dict, locale }: Props) {
           isHidden ? "-translate-y-full" : "translate-y-0"
         }`}
       >
-        <nav className="container-content relative flex h-14 items-center justify-end sm:h-16">
+        <nav className="container-content flex h-14 items-center justify-between sm:h-16">
           {/* Logo — left */}
           <Link
             href={`/${locale}`}
-            className="absolute left-4 flex items-center sm:left-6"
+            className="flex items-center"
             aria-label={profileName}
           >
             <Image
@@ -97,14 +97,18 @@ export function Nav({ dict, locale }: Props) {
           </Link>
 
           {/* Desktop — right */}
-          <ul className="hidden h-full items-stretch gap-6 lg:flex lg:gap-8">
+          <ul className="hidden h-full items-stretch gap-7 lg:flex lg:gap-9">
             {items.map((item) => (
               <li key={item.href} className="flex items-center">
                 <a
                   href={item.href}
-                  className={`label-mono link-underline leading-none ${
-                    isActive(item.href) ? "text-ink font-medium" : ""
-                  }`}
+                  className={
+                    item.href.endsWith("/contact")
+                      ? "rounded-full bg-blue px-5 py-2 text-[13px] text-white transition hover:bg-blue-hover"
+                      : `link-underline text-[13px] tracking-wider ${
+                          isActive(item.href) ? "text-ink" : "text-mute"
+                        }`
+                  }
                 >
                   {item.label}
                 </a>
@@ -121,13 +125,13 @@ export function Nav({ dict, locale }: Props) {
             aria-label={open ? dict.nav.menuClose : dict.nav.menuOpen}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="absolute right-4 z-[70] flex h-11 w-11 items-center justify-center rounded-md transition-colors hover:bg-neutral-100 active:bg-neutral-100 sm:right-6 lg:hidden"
+            className="z-[70] -mr-2 flex h-11 w-11 items-center justify-center rounded-full transition-colors hover:bg-cream active:bg-cream lg:hidden"
           >
             <span className="relative flex h-5 w-5 flex-col items-center justify-center">
               <span
                 className={`absolute h-[1.5px] w-5 transition-all duration-300 ${
                   open
-                    ? "rotate-45 bg-white"
+                    ? "rotate-45 bg-ink"
                     : "-translate-y-[5px] bg-ink"
                 }`}
               />
@@ -139,7 +143,7 @@ export function Nav({ dict, locale }: Props) {
               <span
                 className={`absolute h-[1.5px] w-5 transition-all duration-300 ${
                   open
-                    ? "-rotate-45 bg-white"
+                    ? "-rotate-45 bg-ink"
                     : "translate-y-[5px] bg-ink"
                 }`}
               />
@@ -158,7 +162,7 @@ export function Nav({ dict, locale }: Props) {
         >
           {/* Backdrop overlay */}
           <div
-            className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
+            className={`absolute inset-0 bg-ink/20 backdrop-blur-sm transition-opacity duration-300 ${
               open ? "opacity-100" : "opacity-0"
             }`}
             onClick={() => setOpen(false)}
@@ -166,7 +170,7 @@ export function Nav({ dict, locale }: Props) {
 
           {/* Slide-in panel */}
           <nav
-            className={`absolute inset-y-0 right-0 flex w-[320px] flex-col bg-[#161616] transition-transform duration-300 ease-out sm:w-[380px] ${
+            className={`absolute inset-y-0 right-0 flex w-[320px] flex-col border-l border-line bg-paper transition-transform duration-300 ease-out sm:w-[380px] ${
               open ? "translate-x-0" : "translate-x-full"
             }`}
           >
@@ -176,11 +180,11 @@ export function Nav({ dict, locale }: Props) {
                 type="button"
                 aria-label={dict.nav.menuClose}
                 onClick={() => setOpen(false)}
-                className="flex h-11 w-11 items-center justify-center rounded-md transition-colors hover:bg-white/10 active:bg-white/10"
+                className="flex h-11 w-11 items-center justify-center rounded-full transition-colors hover:bg-cream active:bg-cream"
               >
                 <span className="relative flex h-5 w-5 items-center justify-center">
-                  <span className="absolute h-[1.5px] w-5 rotate-45 bg-white" />
-                  <span className="absolute h-[1.5px] w-5 -rotate-45 bg-white" />
+                  <span className="absolute h-[1.5px] w-5 rotate-45 bg-ink" />
+                  <span className="absolute h-[1.5px] w-5 -rotate-45 bg-ink" />
                 </span>
               </button>
             </div>
@@ -193,14 +197,14 @@ export function Nav({ dict, locale }: Props) {
                     <a
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className={`group flex items-center gap-3 rounded-lg px-4 py-3.5 font-sans text-[17px] transition-colors ${
+                      className={`group flex items-center gap-3 rounded-xl px-4 py-3 display text-2xl transition-colors ${
                         isActive(item.href)
-                          ? "text-white bg-white/[0.08]"
-                          : "text-neutral-400 hover:text-white hover:bg-white/[0.05]"
+                          ? "bg-cream text-ink"
+                          : "text-ink hover:bg-cream"
                       }`}
                     >
                       {isActive(item.href) && (
-                        <span className="h-1.5 w-1.5 rounded-full bg-white flex-shrink-0" />
+                        <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue" />
                       )}
                       {item.label}
                     </a>
@@ -209,17 +213,17 @@ export function Nav({ dict, locale }: Props) {
               </ul>
 
               {/* Divider */}
-              <div className="my-6 h-px bg-white/10" />
+              <div className="my-6 h-px bg-line" />
 
               {/* Language switcher */}
               <div className="px-4">
-                <LanguageSwitcher locale={locale} variant="dark" />
+                <LanguageSwitcher locale={locale} />
               </div>
             </div>
 
             {/* Bottom branding */}
-            <div className="flex-shrink-0 border-t border-white/10 px-10 py-6">
-              <p className="font-mono text-[11px] tracking-wider text-neutral-600">
+            <div className="flex-shrink-0 border-t border-line px-10 py-6">
+              <p className="text-[11px] tracking-wider2 text-mute">
                 © {profileName}
               </p>
             </div>

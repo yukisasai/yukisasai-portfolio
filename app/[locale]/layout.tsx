@@ -1,31 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
-import { Hanken_Grotesk, Noto_Sans_JP, JetBrains_Mono } from "next/font/google";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { siteUrl, profileName, links } from "@/lib/site";
 import "@/app/globals.css";
-
-const sans = Hanken_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-const jp = Noto_Sans_JP({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-jp",
-  display: "swap",
-  preload: false,
-});
-
-const mono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-  preload: false,
-});
 
 type Props = {
   children: React.ReactNode;
@@ -116,11 +94,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   };
 
   return (
-    <html lang={locale} className={`${sans.variable} ${jp.variable} ${mono.variable}`}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
+    // フォントは OS の SF Pro を使うので、Google Fonts へは取りにいかない
+    <html lang={locale}>
       <body>
         <script
           type="application/ld+json"

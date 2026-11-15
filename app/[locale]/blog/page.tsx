@@ -47,22 +47,22 @@ export default async function BlogPage({
         <PageHeader locale={locale as Locale} backLabel={dict.blogPage.back} />
 
         <div className="container-content mt-10">
-          <h1 className="font-sans text-4xl font-bold sm:text-5xl reveal">
+          <h1 className="display text-4xl sm:text-5xl reveal">
             {dict.blogPage.title}
           </h1>
-          <p className="mt-4 max-w-xl text-lg text-muted reveal">
+          <p className="mt-4 max-w-xl text-lg text-mute reveal">
             {dict.blogPage.description}
           </p>
 
           {posts.length === 0 ? (
-            <p className="mt-12 text-lg text-muted reveal">{dict.blogPage.empty}</p>
+            <p className="mt-12 text-lg text-mute reveal">{dict.blogPage.empty}</p>
           ) : (
             <div className="mt-12 space-y-10">
               {posts.map((post) => (
                 <article key={post.slug} className="reveal border-t border-line pt-8">
                   <p className="label-mono mb-2">{post.publishedAt}</p>
-                  <h2 className="font-sans text-2xl font-bold">{post.title}</h2>
-                  <p className="mt-2 text-muted">{post.summary}</p>
+                  <h2 className="display text-2xl">{post.title}</h2>
+                  <p className="mt-2 text-mute">{post.summary}</p>
                 </article>
               ))}
             </div>

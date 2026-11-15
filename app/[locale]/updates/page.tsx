@@ -47,10 +47,10 @@ export default async function UpdatesPage({
         <PageHeader locale={locale as Locale} backLabel={dict.updatesPage.back} />
 
         <div className="container-content mt-10">
-          <h1 className="font-sans text-4xl font-bold sm:text-5xl reveal">
+          <h1 className="display text-4xl sm:text-5xl reveal">
             {dict.updatesPage.title}
           </h1>
-          <p className="mt-4 max-w-xl text-lg text-muted reveal">
+          <p className="mt-4 max-w-xl text-lg text-mute reveal">
             {dict.updatesPage.description}
           </p>
 
@@ -59,7 +59,7 @@ export default async function UpdatesPage({
               <article key={entry.date} className="reveal border-t border-line pt-8">
                 <p className="label-mono mb-3">{entry.date}</p>
                 {entry.title && (
-                  <h2 className="font-sans text-xl font-bold mb-4">{entry.title}</h2>
+                  <h2 className="display text-xl mb-4">{entry.title}</h2>
                 )}
                 <div
                   className="prose"

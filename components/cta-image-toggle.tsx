@@ -24,7 +24,7 @@ export function CtaImageToggle({
         {label} {open ? "↑" : "→"}
       </button>
       {open && (
-        <div className="mt-6 overflow-hidden rounded-xl border border-line sm:mt-8 sm:rounded-2xl">
+        <div className="mt-6 overflow-hidden rounded-[18px] border border-line sm:mt-8 sm:rounded-2xl">
           <Image
             src={imageSrc}
             alt={imageAlt}

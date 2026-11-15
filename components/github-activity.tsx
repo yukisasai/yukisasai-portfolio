@@ -16,11 +16,11 @@ export async function GitHubActivity() {
                 href={repo.url}
                 target="_blank"
                 rel="noreferrer"
-                className="card block !p-5 transition-colors hover:bg-neutral-50"
+                className="card block !p-5 transition-colors hover:bg-cream"
               >
                 <p className="font-sans font-bold">{repo.name}</p>
                 {repo.description && (
-                  <p className="mt-1 text-sm text-muted">{repo.description}</p>
+                  <p className="mt-1 text-sm text-mute">{repo.description}</p>
                 )}
                 {repo.language && (
                   <p className="label-mono mt-2">{repo.language}</p>

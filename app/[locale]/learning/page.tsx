@@ -47,10 +47,10 @@ export default async function LearningPage({
         <PageHeader locale={locale as Locale} backLabel={dict.learningPage.back} />
 
         <div className="container-content mt-10">
-          <h1 className="font-sans text-4xl font-bold sm:text-5xl reveal">
+          <h1 className="display text-4xl sm:text-5xl reveal">
             {dict.learningPage.title}
           </h1>
-          <p className="mt-4 max-w-xl text-lg text-muted reveal">
+          <p className="mt-4 max-w-xl text-lg text-mute reveal">
             {dict.learningPage.description}
           </p>
 
@@ -58,11 +58,11 @@ export default async function LearningPage({
             {topics.map((topic) => (
               <div key={topic.slug} className="card reveal">
                 <div className="flex items-center justify-between mb-3">
-                  <h2 className="font-sans text-xl font-bold">{topic.title}</h2>
+                  <h2 className="display text-xl">{topic.title}</h2>
                   <span className="chip">{topic.level}</span>
                 </div>
                 <div
-                  className="text-sm text-muted"
+                  className="text-sm text-mute"
                   dangerouslySetInnerHTML={{ __html: topic.contentHtml }}
                 />
               </div>

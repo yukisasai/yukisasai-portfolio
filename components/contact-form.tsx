@@ -108,7 +108,7 @@ const URL_RE = /^https?:\/\/.+/;
 function ChevronIcon() {
   return (
     <svg
-      className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
+      className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-mute"
       viewBox="0 0 16 16"
       fill="none"
       stroke="currentColor"
@@ -224,11 +224,11 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
           </svg>
         </div>
 
-        <h3 className="font-sans text-xl font-bold sm:text-2xl">
+        <h3 className="display text-xl sm:text-2xl">
           {dict.successTitle}
         </h3>
 
-        <div className="mt-5 max-w-sm space-y-2 text-sm leading-relaxed text-muted sm:text-base">
+        <div className="mt-5 max-w-sm space-y-2 text-sm leading-relaxed text-mute sm:text-base">
           <p>{dict.successBody}</p>
         </div>
 
@@ -260,8 +260,8 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
   if (status === "not_configured") {
     return (
       <div role="status" className="card max-w-xl">
-        <p className="font-sans text-xl font-bold">{dict.notConfiguredTitle}</p>
-        <p className="mt-2 text-muted">{dict.notConfiguredBody}</p>
+        <p className="display text-xl">{dict.notConfiguredTitle}</p>
+        <p className="mt-2 text-mute">{dict.notConfiguredBody}</p>
         <div className="mt-5 flex flex-wrap gap-3">
           <a href={links.github} target="_blank" rel="noreferrer" className="btn btn-secondary">
             GitHub
@@ -282,14 +282,14 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
   return (
     <form onSubmit={handleSubmit} className="max-w-xl space-y-8" noValidate>
       {/* ── Required section ── */}
-      <p className="font-mono text-xs font-medium tracking-wider text-muted uppercase">
+      <p className="font-mono text-xs font-medium tracking-wider text-mute uppercase">
         {dict.requiredSection}
       </p>
 
       {/* Name */}
       <div>
         <label htmlFor="name" className="label-mono mb-2 block">
-          {dict.name} <span className="text-muted">*</span>
+          {dict.name} <span className="text-mute">*</span>
         </label>
         <input
           id="name"
@@ -308,7 +308,7 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
       {/* Email */}
       <div>
         <label htmlFor="email" className="label-mono mb-2 block">
-          {dict.email} <span className="text-muted">*</span>
+          {dict.email} <span className="text-mute">*</span>
         </label>
         <input
           id="email"
@@ -327,7 +327,7 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
       {/* Category */}
       <div>
         <label htmlFor="category" className="label-mono mb-2 block">
-          {dict.category} <span className="text-muted">*</span>
+          {dict.category} <span className="text-mute">*</span>
         </label>
         <div className="relative">
           <select
@@ -357,7 +357,7 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
       {/* Message */}
       <div>
         <label htmlFor="message" className="label-mono mb-2 block">
-          {dict.message} <span className="text-muted">*</span>
+          {dict.message} <span className="text-mute">*</span>
         </label>
         <textarea
           id="message"
@@ -376,7 +376,7 @@ export function ContactForm({ dict }: { dict: ContactFormDict }) {
       <hr className="border-line" />
 
       {/* ── Optional section ── */}
-      <p className="font-mono text-xs font-medium tracking-wider text-muted uppercase">
+      <p className="font-mono text-xs font-medium tracking-wider text-mute uppercase">
         {dict.optionalSection}
       </p>
 

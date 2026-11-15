@@ -77,12 +77,12 @@ export default async function ContactPage({
             {/* Hero */}
             <section className="container-content py-16 text-center sm:py-24">
               <p className="eyebrow mb-3 sm:mb-4 reveal">{dict.contactPage.title}</p>
-              <h1 className="font-sans text-3xl font-bold reveal sm:text-4xl md:text-5xl">
+              <h1 className="display text-3xl reveal sm:text-4xl md:text-5xl">
                 {dict.contact.title.split("\n").map((line: string, i: number, arr: string[]) => (
                   <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
                 ))}
               </h1>
-              <p className="mt-4 mx-auto max-w-xl text-base text-muted reveal sm:text-lg">
+              <p className="mt-4 mx-auto max-w-xl text-base text-mute reveal sm:text-lg">
                 {dict.contactPage.description}
               </p>
             </section>
@@ -98,10 +98,10 @@ export default async function ContactPage({
                         {dict.contactPage.formSection.recommended}
                       </span>
                     </div>
-                    <h2 className="mt-3 font-sans text-2xl font-bold sm:text-3xl">
+                    <h2 className="mt-3 display text-2xl sm:text-3xl">
                       {dict.contactPage.formSection.title}
                     </h2>
-                    <p className="mt-3 text-base text-muted">
+                    <p className="mt-3 text-base text-mute">
                       {dict.contactPage.formSection.description}
                     </p>
                   </div>
@@ -119,10 +119,10 @@ export default async function ContactPage({
                 {/* Quick Chat */}
                 <div className="py-12 sm:py-20 sm:pr-12 sm:border-r sm:border-line reveal">
                   <p className="eyebrow">{dict.contactPage.chatSection.eyebrow}</p>
-                  <h2 className="mt-3 font-sans text-xl font-bold sm:text-2xl">
+                  <h2 className="mt-3 display text-xl sm:text-2xl">
                     {dict.contactPage.chatSection.title}
                   </h2>
-                  <p className="mt-2 text-sm text-muted sm:text-base">
+                  <p className="mt-2 text-sm text-mute sm:text-base">
                     {dict.contactPage.chatSection.description}
                   </p>
                   <div className="mt-6 flex flex-col gap-3">
@@ -132,21 +132,21 @@ export default async function ContactPage({
                         href={dm.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="group flex items-center gap-3 rounded-xl border border-line px-5 py-4 transition-colors hover:bg-neutral-50"
+                        className="group flex items-center gap-3 rounded-[18px] border border-line px-5 py-4 transition-colors hover:bg-cream"
                       >
-                        <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-50 text-ink transition-colors group-hover:bg-neutral-100">
+                        <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-cream text-ink transition-colors group-hover:bg-line/40">
                           {dm.icon}
                         </span>
                         <div className="flex-1">
                           <p className="font-sans text-sm font-semibold sm:text-base">{dm.name}</p>
-                          <p className="text-xs text-muted">DM</p>
+                          <p className="text-xs text-mute">DM</p>
                         </div>
                         <svg
                           viewBox="0 0 16 16"
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="1.5"
-                          className="h-4 w-4 text-muted transition-transform group-hover:translate-x-0.5"
+                          className="h-4 w-4 text-mute transition-transform group-hover:translate-x-0.5"
                           aria-hidden="true"
                         >
                           <path d="M6 3l5 5-5 5" />
@@ -159,17 +159,17 @@ export default async function ContactPage({
                 {/* Email */}
                 <div className="border-t border-line py-12 sm:border-t-0 sm:py-20 sm:pl-12 reveal">
                   <p className="eyebrow">{dict.contactPage.emailSection.eyebrow}</p>
-                  <h2 className="mt-3 font-sans text-xl font-bold sm:text-2xl">
+                  <h2 className="mt-3 display text-xl sm:text-2xl">
                     {dict.contactPage.emailSection.title}
                   </h2>
-                  <p className="mt-2 text-sm text-muted sm:text-base">
+                  <p className="mt-2 text-sm text-mute sm:text-base">
                     {dict.contactPage.emailSection.description}
                   </p>
                   <a
                     href={`mailto:${email}`}
-                    className="group mt-6 flex items-center gap-3 rounded-xl border border-line px-5 py-4 transition-colors hover:bg-neutral-50"
+                    className="group mt-6 flex items-center gap-3 rounded-[18px] border border-line px-5 py-4 transition-colors hover:bg-cream"
                   >
-                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-50 text-ink transition-colors group-hover:bg-neutral-100">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-cream text-ink transition-colors group-hover:bg-line/40">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5" aria-hidden="true">
                         <rect x="2" y="4" width="20" height="16" rx="2" />
                         <path d="M22 4L12 13 2 4" />
@@ -177,14 +177,14 @@ export default async function ContactPage({
                     </span>
                     <div className="flex-1 min-w-0">
                       <p className="font-sans text-sm font-semibold sm:text-base">Email</p>
-                      <p className="text-xs text-muted truncate">{email}</p>
+                      <p className="text-xs text-mute truncate">{email}</p>
                     </div>
                     <svg
                       viewBox="0 0 16 16"
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="1.5"
-                      className="h-4 w-4 flex-shrink-0 text-muted transition-transform group-hover:translate-x-0.5"
+                      className="h-4 w-4 flex-shrink-0 text-mute transition-transform group-hover:translate-x-0.5"
                       aria-hidden="true"
                     >
                       <path d="M6 3l5 5-5 5" />

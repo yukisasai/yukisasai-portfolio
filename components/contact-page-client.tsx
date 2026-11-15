@@ -45,11 +45,11 @@ export function ContactPageClient({
           </svg>
         </div>
 
-        <h1 className="font-sans text-3xl font-bold sm:text-4xl md:text-5xl">
+        <h1 className="display text-3xl sm:text-4xl md:text-5xl">
           {successTitle}
         </h1>
 
-        <p className="mt-6 max-w-lg text-base leading-relaxed text-muted sm:text-lg">
+        <p className="mt-6 max-w-lg text-base leading-relaxed text-mute sm:text-lg">
           {successBody}
         </p>
 

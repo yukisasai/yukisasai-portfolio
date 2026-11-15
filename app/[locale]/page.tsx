@@ -38,17 +38,21 @@ export default async function Home({
       <main id="top" className="pt-14 sm:pt-16">
         {/* ---------- Hero ---------- */}
         <section className="container-content flex min-h-[42vh] flex-col justify-center py-16 sm:min-h-[82vh] sm:py-24">
-          <p className="eyebrow mb-4 sm:mb-6">{dict.hero.role}</p>
-          <h1 className="font-sans text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
-            {profileName}
+          <p className="eyebrow reveal">{dict.hero.role}</p>
+          <h1 className="reveal mt-8 display text-[13vw] leading-[1.05] tracking-[-0.035em] sm:text-6xl md:text-7xl lg:text-8xl">
+            {profileName.split(" ").map((word, i, arr) => (
+              <span key={i} className={i === arr.length - 1 ? "pop-text" : undefined}>
+                {word}{i < arr.length - 1 && " "}
+              </span>
+            ))}
           </h1>
-          <p className="mt-6 max-w-2xl font-sans text-xl leading-snug sm:mt-8 sm:text-2xl md:text-3xl">
+          <p className="reveal mt-8 max-w-2xl display text-xl leading-snug sm:text-2xl md:text-3xl">
             {dict.hero.lead}
           </p>
-          <p className="mt-3 max-w-xl text-base text-muted sm:mt-4 sm:text-lg">
+          <p className="reveal mt-4 max-w-xl text-[15px] leading-relaxed text-mute sm:text-base">
             {dict.hero.leadSub}
           </p>
-          <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">
+          <div className="reveal mt-10 flex flex-wrap gap-4">
             <a href="#projects" className="btn btn-primary">
               {dict.hero.viewProjects}
             </a>
@@ -67,7 +71,7 @@ export default async function Home({
             {dict.numbers.items.map(
               (item: { value: string; label: string }, i: number) => (
                 <div key={i} className="reveal text-center">
-                  <p className="font-sans text-2xl font-bold whitespace-nowrap sm:text-3xl md:text-4xl">
+                  <p className="display text-2xl whitespace-nowrap sm:text-3xl md:text-4xl">
                     {item.value}
                   </p>
                   <p className="label-mono mt-2">{item.label}</p>
@@ -115,7 +119,7 @@ export default async function Home({
                         {step.year ?? "→"}
                       </span>
                     ) : step.icon ? (
-                      <span className="text-[10px] font-bold text-muted sm:text-xs">
+                      <span className="text-[10px] font-bold text-mute sm:text-xs">
                         {step.icon}
                       </span>
                     ) : null}
@@ -127,10 +131,10 @@ export default async function Home({
                   {step.year && (
                     <p className="label-mono mb-1">{step.year}</p>
                   )}
-                  <h3 className="font-sans text-base font-bold sm:text-lg md:text-xl">
+                  <h3 className="display text-base sm:text-lg md:text-xl">
                     {step.title}
                   </h3>
-                  <p className="mt-1 text-sm leading-relaxed text-muted sm:text-base">
+                  <p className="mt-1 text-sm leading-relaxed text-mute sm:text-base">
                     {step.description}
                   </p>
                 </div>
@@ -150,7 +154,7 @@ export default async function Home({
               <li key={item.name} className="card reveal !p-4 text-sm sm:!p-5 sm:text-base">
                 {item.name}
                 {item.badge && (
-                  <span className="ml-2 inline-block rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-medium text-neutral-500">
+                  <span className="ml-2 inline-block rounded-full bg-cream px-2.5 py-0.5 text-xs text-mute">
                     {item.badge}
                   </span>
                 )}
@@ -172,14 +176,14 @@ export default async function Home({
                 className="reveal group relative"
               >
                 <div className="mb-3 sm:mb-4">
-                  <span className="font-mono text-3xl font-bold text-line transition-colors group-hover:text-ink sm:text-4xl">
+                  <span className="display text-3xl text-line transition-colors group-hover:text-blue sm:text-4xl">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <h3 className="font-sans text-base font-bold sm:text-lg">
+                <h3 className="display text-base sm:text-lg">
                   {step.title}
                 </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted sm:mt-2">
+                <p className="mt-1.5 text-sm leading-relaxed text-mute sm:mt-2">
                   {step.description}
                 </p>
                 {/* Connector line on desktop */}
@@ -231,7 +235,7 @@ export default async function Home({
                       key={item.name}
                       className="flex items-center gap-2.5 text-sm sm:gap-3 sm:text-base"
                     >
-                      <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-md bg-neutral-50 font-mono text-[10px] font-bold text-muted sm:h-8 sm:w-8 sm:text-xs">
+                      <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-cream text-[10px] font-medium text-mute sm:h-8 sm:w-8 sm:text-xs">
                         {item.name.slice(0, 2).toUpperCase()}
                       </span>
                       <span>{item.name}</span>
@@ -274,14 +278,14 @@ export default async function Home({
                     href={article.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="card group flex items-baseline justify-between gap-4 !p-5 transition-colors hover:border-accent"
+                    className="card group flex items-baseline justify-between gap-4 !p-5 hover:border-blue"
                   >
-                    <span className="font-medium group-hover:text-accent transition-colors">
+                    <span className="font-medium transition-colors group-hover:text-blue-link">
                       {article.title}
                     </span>
                     <time
                       dateTime={article.publishedAt}
-                      className="shrink-0 text-sm text-muted"
+                      className="shrink-0 text-sm text-mute"
                     >
                       {new Date(article.publishedAt).toLocaleDateString(locale, {
                         year: "numeric",

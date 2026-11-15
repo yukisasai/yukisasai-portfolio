@@ -36,8 +36,8 @@ export function LanguageSwitcher({ locale, variant = "light" }: Props) {
               href={`/${l}${pathWithoutLocale}`}
               className={`transition-colors ${
                 isDark
-                  ? "text-neutral-500 hover:text-white"
-                  : "text-muted hover:text-ink"
+                  ? "text-mute hover:text-white"
+                  : "text-mute hover:text-ink"
               }`}
               lang={l}
             >

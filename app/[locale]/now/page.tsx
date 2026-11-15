@@ -50,10 +50,10 @@ export default async function NowPage({
         <PageHeader locale={locale as Locale} backLabel={dict.nowPage.back} />
 
         <div className="container-content mt-10">
-          <h1 className="font-sans text-4xl font-bold sm:text-5xl reveal">
+          <h1 className="display text-4xl sm:text-5xl reveal">
             {dict.nowPage.title}
           </h1>
-          <p className="mt-4 max-w-xl text-lg text-muted reveal">
+          <p className="mt-4 max-w-xl text-lg text-mute reveal">
             {dict.nowPage.description}
           </p>
 

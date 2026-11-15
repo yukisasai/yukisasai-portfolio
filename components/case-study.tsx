@@ -42,7 +42,7 @@ export function CaseStudy({
         className="group block"
       >
         {project.image ? (
-          <div className="overflow-hidden rounded-xl border border-line sm:rounded-2xl">
+          <div className="overflow-hidden rounded-[18px] border border-line">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={project.image}
@@ -53,9 +53,9 @@ export function CaseStudy({
             />
           </div>
         ) : (
-          <div className="relative aspect-[16/9] overflow-hidden rounded-xl border border-line bg-neutral-50 transition-colors duration-300 group-hover:bg-neutral-100 sm:rounded-2xl">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-[18px] border border-line bg-cream transition-colors duration-300 group-hover:bg-line/40">
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-1">
-              <span className="font-sans text-base font-bold text-neutral-300 sm:text-lg">
+              <span className="display text-base text-mute sm:text-lg">
                 {project.name}
               </span>
             </div>
@@ -66,13 +66,13 @@ export function CaseStudy({
       {/* Category + Name */}
       <p className="eyebrow mt-6 sm:mt-10">{project.category}</p>
       <Link href={`/${locale}/projects/${project.slug}`}>
-        <h3 className="mt-1.5 font-sans text-2xl font-bold transition-colors hover:text-muted sm:mt-2 sm:text-3xl md:text-4xl">
+        <h3 className="mt-2 display text-2xl transition-colors hover:text-blue-link sm:text-3xl md:text-4xl">
           {project.name}
         </h3>
       </Link>
 
       {/* Overview */}
-      <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:mt-6 sm:text-lg">
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-mute sm:mt-6 sm:text-lg">
         {project.overview}
       </p>
 
