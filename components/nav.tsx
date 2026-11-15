@@ -21,10 +21,12 @@ export function Nav({ dict, locale }: Props) {
   const pathname = usePathname();
 
   const items = [
+    { href: `/${locale}#about`, label: dict.nav.about },
     { href: `/${locale}/projects`, label: dict.nav.projects },
-    { href: "#writing", label: dict.nav.writing },
-    { href: `/${locale}/now`, label: dict.nav.now },
-    { href: `/${locale}/uses`, label: dict.nav.uses },
+    { href: `/${locale}#services`, label: dict.nav.services },
+    { href: `/${locale}#process`, label: dict.nav.process },
+    { href: `/${locale}#skills`, label: dict.nav.skills },
+    { href: `/${locale}#writing`, label: dict.nav.writing },
     { href: `/${locale}/contact`, label: dict.nav.contact },
   ];
 
@@ -90,7 +92,7 @@ export function Nav({ dict, locale }: Props) {
           </Link>
 
           {/* Desktop — right */}
-          <ul className="hidden h-full items-stretch gap-7 lg:flex lg:gap-9">
+          <ul className="hidden h-full items-stretch gap-5 lg:flex xl:gap-7">
             {items.map((item) => (
               <li key={item.href} className="flex items-center">
                 <a

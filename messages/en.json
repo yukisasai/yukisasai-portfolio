@@ -7,6 +7,7 @@
   "nav": {
     "about": "About",
     "services": "Services",
+    "process": "Process",
     "projects": "Projects",
     "skills": "Skills",
     "writing": "Writing",
@@ -29,10 +30,22 @@
   },
   "numbers": {
     "items": [
-      { "value": "50+", "label": "Websites Built" },
-      { "value": "5 Years", "label": "Experience" },
-      { "value": "WordPress", "label": "Professional" },
-      { "value": "Next.js & AI", "label": "Growing" }
+      {
+        "value": "50+",
+        "label": "Websites Built"
+      },
+      {
+        "value": "5 Years",
+        "label": "Experience"
+      },
+      {
+        "value": "WordPress",
+        "label": "Professional"
+      },
+      {
+        "value": "Next.js & AI",
+        "label": "Growing"
+      }
     ]
   },
   "about": {

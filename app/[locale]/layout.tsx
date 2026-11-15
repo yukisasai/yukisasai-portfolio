@@ -56,7 +56,10 @@ export async function generateMetadata({
       },
     },
     icons: {
-      icon: "/favicon.ico",
+      icon: [
+        { url: "/favicon.ico", sizes: "16x16 32x32 48x48 64x64" },
+        { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      ],
       apple: "/apple-icon.png",
     },
     openGraph: {

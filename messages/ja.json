@@ -7,6 +7,7 @@
   "nav": {
     "about": "About",
     "services": "Services",
+    "process": "Process",
     "projects": "Projects",
     "skills": "Skills",
     "writing": "Writing",
@@ -29,10 +30,22 @@
   },
   "numbers": {
     "items": [
-      { "value": "50+", "label": "制作実績" },
-      { "value": "5 Years", "label": "実務経験" },
-      { "value": "WordPress", "label": "プロフェッショナル" },
-      { "value": "Next.js & AI", "label": "成長中" }
+      {
+        "value": "50+",
+        "label": "制作実績"
+      },
+      {
+        "value": "5 Years",
+        "label": "実務経験"
+      },
+      {
+        "value": "WordPress",
+        "label": "プロフェッショナル"
+      },
+      {
+        "value": "Next.js & AI",
+        "label": "成長中"
+      }
     ]
   },
   "about": {
