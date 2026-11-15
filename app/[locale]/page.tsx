@@ -44,7 +44,7 @@ export default async function Home({
 
       <main id="top">
         {/* ---------- Hero ---------- */}
-        <section className="relative flex min-h-[100svh] items-end overflow-hidden pb-16 pt-32 md:pb-24">
+        <section className="relative flex min-h-[78svh] items-center overflow-hidden pb-16 pt-28 md:min-h-[86svh] md:pb-20">
           <div aria-hidden className="pointer-events-none absolute -right-40 -top-40 h-[640px] w-[640px] rounded-full bg-[radial-gradient(circle,#CFE4FB_0%,rgba(207,228,251,0)_65%)] opacity-80" />
           <div aria-hidden className="pointer-events-none absolute -left-40 top-1/2 h-[460px] w-[460px] rounded-full bg-[radial-gradient(circle,#EEDCFA_0%,rgba(238,220,250,0)_65%)] opacity-70" />
           <div className="container-content relative">
